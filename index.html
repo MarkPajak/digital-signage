@@ -1,0 +1,104 @@
+<html>
+<head>
+	<title>Digital Signage</title>
+	<meta name="description" content="online/offline digital signage with events, sponsors and poster modes">
+	<link rel="stylesheet" href="css/styles.css">	
+	<link  href="css/eventList.css" rel="stylesheet"> 
+	<link  href="css/bootstrap.css" rel="stylesheet">
+	<link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+	<script data-main="js/main" src="js/libs/require/require.js"></script>
+	<style>
+		*{
+		cursor: none;
+		}
+		 .nocursor { cursor:none; }
+		/* thanks to http://tobiasahlin.com/spinkit/ */
+		.spinner {
+		  width: 40px;
+		  height: 40px;
+		  position: relative;
+		  margin: 100px auto;
+		}
+
+		.double-bounce1, .double-bounce2 {
+		  width: 100%;
+		  height: 100%;
+		  border-radius: 50%;
+		  background-color: #333;
+		  opacity: 0.6;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  
+		  -webkit-animation: bounce 2.0s infinite ease-in-out;
+		  animation: bounce 2.0s infinite ease-in-out;
+		}
+
+		.double-bounce2 {
+		  -webkit-animation-delay: -1.0s;
+		  animation-delay: -1.0s;
+		}
+
+		@-webkit-keyframes bounce {
+		  0%, 100% { -webkit-transform: scale(0.0) }
+		  50% { -webkit-transform: scale(1.0) }
+		}
+
+		@keyframes bounce {
+		  0%, 100% { 
+			transform: scale(0.0);
+			-webkit-transform: scale(0.0);
+		  } 50% { 
+			transform: scale(1.0);
+			-webkit-transform: scale(1.0);
+		  }
+		}
+
+
+		/*design  will be for portrait screens 1080w x 1920h
+		landscape screens 1920w x 1080h
+		*/
+		@font-face {
+			  font-family: 'Muli';
+			  font-style: normal;
+			  font-weight: 400;
+			  src: local('Muli'), url("css/kU4XYdV4jtS72BIidPtqyw.woff") format('woff');
+		}
+
+
+		body{
+		background:black;
+		position:fixed;
+		width:100%;
+		overflow:hidden!important;
+			font-family: 'Muli', sans-serif;
+		}
+
+		#eventsList,#page{
+		padding-left: 5%;
+		}
+
+
+		/* http://www.colorzilla.com/gradient-editor/ */
+		body{
+		background:black;
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66bf00', endColorstr='#175e00',GradientType=0 ); /* IE6-9 */
+		}
+	</style>
+</head>
+<body  class="nocursor">
+	<div id="header" > </div>
+	<div id="mainContent" > </div>
+	<div id="page"  style="width:110%;height:300px;"></div>
+	<div id="eventsListBACKGROUND"></div>
+	<div id="eventsList">
+	<div class="spinner" style="position:absolute;top:150%;left:50%">
+	  <div class="double-bounce1"></div>
+	  <div class="double-bounce2"></div>
+	</div>
+	</div>
+	<div id="workshops"></div>
+	<div id="eventsImages" >
+	</div>
+</body>
+</html>
