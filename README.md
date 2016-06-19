@@ -15,6 +15,7 @@ This application is running across multiple Bristol Museum Venues, on various sc
  - Timings for each mode can be configured
  - automatic content refresh to allow for remote control
  - different event types displayed differently - facilities | special events | exhibitions | visitor information
+ - filter specific event types for each screen or venue
  
 
 #SETUP
