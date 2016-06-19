@@ -1,1 +1,1 @@
-start "Chrome" chrome "%cd%/index.html#events/machineMcafe" –kiosk –allow-file-access-from-files –incognito
+start "Chrome" chrome "%cd%/index.html#events/machineMcafe" --kiosk --allow-file-access-from-files --incognito
