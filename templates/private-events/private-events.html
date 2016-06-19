@@ -263,9 +263,11 @@ function hasExtension(inputID, exts) {
 
 
   _.each(posters, function(poster) { 
+  var is_film=false
 				//if(Record.get('images')){
 						//if(Record.get('images')[0]){
 								var item =  poster.get('path')	
+								var file_type =  poster.get('file')	
 								
 								var data_img = item;		
 								var data_thumb 	= item;	
@@ -285,7 +287,8 @@ function hasExtension(inputID, exts) {
 
 		<div 
 		<%
-		if(hasExtension(data_img, ['.mp4'])){
+		if(hasExtension(file_type, ['.mp4'])||hasExtension(file_type, ['.mov'])||hasExtension(file_type, ['.MOV'])){
+		is_film=true
 %>
 		data-videox="video" 
 <%
@@ -310,11 +313,11 @@ function hasExtension(inputID, exts) {
 									<%
 									
 									
-								if(hasExtension(data_img, ['.mp4'])){
+								if(is_film==true){
 								
 								%>
 							
-								  <video   controls autoplay  style="<%
+								  <video    autoplay  style="<%
 										
 										if(poster.get('width')== poster.get('height'))
 										{
@@ -333,6 +336,7 @@ function hasExtension(inputID, exts) {
 										}
 										%>">
 								  <source src="<%= data_img  %>" type="video/mp4">
+								   <source src="<%= data_img  %>" type="video/mov">
 								  
 									
 								  </video>
@@ -465,65 +469,80 @@ function hasExtension(inputID, exts) {
 $(function () {
 
 
-$('.fotorama').delay(1000).animate({ opacity: 1 }, 2000);
-
-
-window.px=0
+	$('.fotorama').delay(1000).animate({ opacity: 1 }, 2000);
+	window.px=0
+	
 	function moveContent(px) {
 		   $('.section').clearQueue()
 		   if(window.px<=0){window.px=0}
-	window.px+=pxz
-    $('.section').animate({scrollTop:px},px);
-
-  
-}
-	
-	
+			window.px+=pxz
+			$('.section').animate({scrollTop:px},px);
+ 
+	}
 	
     // 1. Initialize fotorama manually.
     var $fotoramaDiv = $('.fotorama').fotorama({
 	thumbwidth :100,
-	thumbheight :100
+	thumbheight :100,	
 	});
 	
-	$('.fotorama').on(
+	fotorama.setOptions({
+				loop:true,
+				arrows: false,
+				transition:"crossfade"
+});
+	
+		  
+		  
+		  
+	
+  $('.fotorama').on(
   'fotorama:show',
   function (e, fotorama, extra) {
-		if((fotorama.activeFrame.videox)=="video"){
-	  currentvideo=$(".fotorama__active video").get(0)
-	  console.log(fotorama);
-	  currentvideo.pause();
-	  fotorama.stopAutoplay()
-	  currentvideo.onended = function(e) {
-	  fotorama.show('>');
-      fotorama.startAutoplay(<% print(looptime * 1000) %>)
-    };
-	}
+			
+			if((fotorama.activeFrame.videox)=="video"){
+			  currentvideo=$(".fotorama__active video").get(0)
+			  if(currentvideo){
+			  currentvideo.pause();
+			  fotorama.stopAutoplay()
+			  currentvideo.onended = function(e) {
+							fotorama.show('>');
+							fotorama.startAutoplay(<% print(looptime * 1000) %>)
+							};
+				}
+			}
   });
-	$('.fotorama').on(
+ 
+  $('.fotorama').on(
   'fotorama:showend',
   function (e, fotorama, extra) {
+	
 		if((fotorama.activeFrame.videox)=="video"){
-	  currentvideo=$(".fotorama__active video").get(0)
-	  console.log(fotorama);
-	  currentvideo.play();
-	  fotorama.stopAutoplay()
-	  currentvideo.onended = function(e) {
-	  fotorama.show('>');
-      fotorama.startAutoplay(<% print(looptime * 1000) %>)
-    };
-	}
+		  currentvideo=$(".fotorama__active video").get(0)
+		  if(currentvideo){
+		  currentvideo.play();
+		  fotorama.stopAutoplay()
+		  currentvideo.onended = function(e) {
+				fotorama.show('>');
+				fotorama.startAutoplay(<% print(looptime * 1000) %>)
+				};
+		}
+		}
   });
   
     // 2. Get the API object.
     var fotorama = $fotoramaDiv.data('fotorama');
 	fotorama.show(<% print(IndexCount)  %>)
-	
-
-	
-	
 	$(window).trigger('resize');
-	
+	 
+	   currentvideo=$(".fotorama__active video").get(0)
+		if(currentvideo){
+		currentvideo.play();
+		currentvideo.onended = function(e) {
+							fotorama.show('>');
+							fotorama.startAutoplay(<% print(looptime * 1000) %>)
+							};
+		}
 			
 
 $("body").keydown(function(e) {
