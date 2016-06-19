@@ -22,10 +22,15 @@ SETUP
  
 ADVANCED
 
-*GOOGLE DRIVE*
- - change the google drive public url to a publi image directory
- - set folders in the directory to match venue and machine name
+ - set machine specific settings by building your own settings.JSON file
+ - use the url parameters to load up the settings
 
-*EVENTS FEED*
+GOOGLE DRIVE
+
+ - change the google_drive_public_dir to your public image directory (router.js)
+ - set folders in the directory to match venue and machine name in the url parameters
+
+EVENTS FEED
+
  - configure the backbone models to connect to an events api (field names must match the source data - these will need updating throughout the app if different)
  - 
