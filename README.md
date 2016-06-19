@@ -18,5 +18,14 @@ This application is running across multiple Bristol Museum Venues, on various sc
 SETUP
 
  - to see basic use, download the zip and open startme.bat (in windows)
+ - use Chrome dev tools>emulator to set screen dimensions to 1080 x 1920 or 1920 x 1080
  
+ADVANCED
 
+*GOOGLE DRIVE*
+ - change the google drive public url to a publi image directory
+ - set folders in the directory to match venue and machine name
+
+*EVENTS FEED*
+ - configure the backbone models to connect to an events api (field names must match the source data - these will need updating throughout the app if different)
+ - 
