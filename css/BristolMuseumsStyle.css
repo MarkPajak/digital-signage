@@ -1,0 +1,4654 @@
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  *overflow: visible;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+.filter__options.filter__options--show {
+  display: block;
+}
+
+label, .comments-section .comment__author-tag {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.archive__post, .callout-module, .comments-section .comment, .wp-pagenavi {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+.form-field, .row, .row__colspaced, .filter__group, .filter__options, .navigation, .navigation__menu, .section {
+  *zoom: 1;
+}
+.form-field:after, .row:after, .row__colspaced:after, .filter__group:after, .filter__options:after, .navigation:after, .navigation__menu:after, .section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.max-width, .max-width img, .responsive-tabs .tab__map iframe, .venue-image img, .as-wysiwyg img {
+  max-width: 100%;
+  height: auto;
+}
+
+.radio-buttons label, .font-body, textarea, body, .comments-section .comments-section__title, .comments-section .comment-reply-title, .filter__tabs__heading {
+  font-family: 'DIN Next W01 Regular', sans-serif;
+}
+
+em, i, q {
+  font-family: 'DIN Next W01 Italic', sans-serif;
+}
+
+label, h1, h2, h3, h4, h5, h6, strong, b, .article-teaser__meta, .comments-section .comments-section__title .comments-section__title__post-title, .comments-section .comment-reply-title .comments-section__title__post-title, .comments-section .comment__author-tag, .comments-section .comment__logged-as__link, .opening-times__descriptive-list-item--date {
+  font-family: 'DIN Next W01 Medium', sans-serif;
+}
+
+.as-heading-headline, .is-typeset .headline, .as-heading--light, .as-blockquote p, .as-blockquote--typeset p, .is-typeset blockquote p, .is-typeset-teaser h1, .is-typeset-teaser h2, .is-typeset-teaser h3, .is-typeset-teaser h4, .is-typeset-teaser h5, .is-typeset-teaser h6, .cutin__caption__title, .hero__caption__heading, .venue-menu-dropdown__heading--whats-at,
+.venue-menu-dropdown__heading--whats-on, .strapline, .strapline-small-screen {
+  font-family: 'DIN Next W01 Light', sans-serif;
+}
+
+.font-mshed, .as-heading-headline--mshed, .is-typeset--mshed .headline, .is-typeset--mshed h1, .is-typeset--mshed h2, .is-typeset--mshed h3, .is-typeset--mshed h4, .is-typeset--mshed h5, .is-typeset--mshed h6 {
+  font-family: 'AmericanTypwrterITCW02- 737097', monospaced, sans-serif;
+}
+
+/* Icons
+*/
+.ico {
+  /* @TODO check icon implementation as the
+     @include inline-block fails when the icon
+     appears before "Previous" in the pagination in ie7 */
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  /* Use 100% here instead of -9999px for performance (http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/) */
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ico {
+  background-image: url('../img/ico-s7a6ac2309b.png');
+  background-repeat: no-repeat;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.ico.ico-anchor {
+  background-position: 0 -934px;
+  height: 24px;
+  width: 24px;
+}
+.ico.ico-bus {
+  background-position: 0 -900px;
+  height: 24px;
+  width: 24px;
+}
+.ico.ico-car-park {
+  background-position: 0 -798px;
+  height: 24px;
+  width: 24px;
+}
+.ico.ico-car {
+  background-position: 0 -866px;
+  height: 24px;
+  width: 24px;
+}
+.ico.ico-compass {
+  background-position: 0 -832px;
+  height: 24px;
+  width: 24px;
+}
+.ico.ico-logo-222-grey-blaise-castle-house-museum {
+  background-position: 0 -436px;
+  height: 99px;
+  width: 111px;
+}
+.ico.ico-logo-222-grey-bristol-museum-and-art-gallery {
+  background-position: 0 -109px;
+  height: 99px;
+  width: 111px;
+}
+.ico.ico-logo-222-grey-bristol-record-office {
+  background-position: 0 -545px;
+  height: 99px;
+  width: 111px;
+}
+.ico.ico-logo-222-grey-georgian-house-museum {
+  background-position: 0 -327px;
+  height: 99px;
+  width: 111px;
+}
+.ico.ico-logo-222-grey-m-shed {
+  background-position: 0 -218px;
+  height: 99px;
+  width: 111px;
+}
+.ico.ico-logo-222-grey-red-lodge-museum {
+  background-position: 0 -654px;
+  height: 99px;
+  width: 111px;
+}
+.ico.ico-logo-222-grey-service {
+  background-position: 0 0;
+  height: 99px;
+  width: 111px;
+}
+.ico.ico-museum {
+  background-position: 0 -968px;
+  height: 24px;
+  width: 24px;
+}
+.ico.ico-train {
+  background-position: 0 -1002px;
+  height: 24px;
+  width: 24px;
+}
+.ico.ico-twitter {
+  background-position: 0 -763px;
+  height: 25px;
+  width: 25px;
+}
+@media (min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 2 / 1), (-webkit-min-device-pixel-ratio: 1.5) {
+  .ico {
+    background-image: url('../img/ico2x-scaa44ddf4a.png');
+    -webkit-background-size: 111px auto;
+    -moz-background-size: 111px auto;
+    -o-background-size: 111px auto;
+    background-size: 111px auto;
+  }
+  .ico.ico-anchor {
+    background-position: 0 -845px;
+  }
+  .ico.ico-bus {
+    background-position: 0 -816px;
+  }
+  .ico.ico-car-park {
+    background-position: 0 -932px;
+  }
+  .ico.ico-car {
+    background-position: 0 -787px;
+  }
+  .ico.ico-compass {
+    background-position: 0 -758px;
+  }
+  .ico.ico-logo-222-grey-blaise-castle-house-museum {
+    background-position: 0 -416px;
+  }
+  .ico.ico-logo-222-grey-bristol-museum-and-art-gallery {
+    background-position: 0 -208px;
+  }
+  .ico.ico-logo-222-grey-bristol-record-office {
+    background-position: 0 -520px;
+  }
+  .ico.ico-logo-222-grey-georgian-house-museum {
+    background-position: 0 -312px;
+  }
+  .ico.ico-logo-222-grey-m-shed {
+    background-position: 0 -104px;
+  }
+  .ico.ico-logo-222-grey-red-lodge-museum {
+    background-position: 0 -624px;
+  }
+  .ico.ico-logo-222-grey-service {
+    background-position: 0 0;
+  }
+  .ico.ico-museum {
+    background-position: 0 -874px;
+  }
+  .ico.ico-train {
+    background-position: 0 -903px;
+  }
+  .ico.ico-twitter {
+    background-position: 0 -728px;
+  }
+}
+
+label, legend, select {
+  display: block;
+}
+
+label {
+  color: #1c1c1b;
+  font-size: 0.8125em;
+  line-height: 1.8461538em;
+}
+label span {
+  color: #4b565c;
+  padding-left: 2px;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+label span:before {
+  content: ":";
+  color: #1c1c1b;
+  padding-right: 4px;
+}
+
+fieldset {
+  margin: 0;
+  display: block;
+  float: left;
+  width: 100%;
+  clear: both;
+}
+
+legend {
+  color: #1c1c1b;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  width: 100%;
+  background: #f9f9f9;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  background: #fff;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  *margin-top: 0;
+  line-height: normal;
+  cursor: pointer;
+}
+
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"],
+button {
+  width: auto;
+}
+
+select,
+input[type="file"] {
+  *margin-top: 4px;
+  /* In IE7, the height of the select element cannot be changed by height, only font-size */
+}
+
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.form__section, .comment-form {
+  padding: 18.75px 15px;
+  background: #fff;
+  border: 1px solid #e5e5e4;
+}
+
+.form-field {
+  position: relative;
+}
+
+.form-field--pair {
+  margin-bottom: 0.5em;
+}
+.lt-ie9 .form-field--pair {
+  width: 49%;
+  margin-right: 1%;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.lt-ie9 .form-field--pair + .form-field--pair {
+  margin-right: 0;
+}
+@media screen and (min-width: 600px) {
+  .form-field--pair {
+    width: 49%;
+    margin-right: 1%;
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .form-field--pair + .form-field--pair {
+    margin-right: 0;
+  }
+}
+
+.form-field--spaced, .is-typeset .form-submit {
+  margin-top: 1em;
+}
+
+.form-field__cancel-inline {
+  position: relative;
+}
+
+.form-field__cancel-inline__action {
+  background: url(../svg/icon-cancel.svg) transparent no-repeat 0 0;
+  height: 18px;
+  width: 18px;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  content: ".";
+  text-indent: -999px;
+}
+
+.form-item {
+  padding: 5px 7.5px;
+  border: 1px solid #e5e5e4;
+}
+.form-item.form-item--pair {
+  margin-bottom: 0.5em;
+}
+.lt-ie9 .form-item.form-item--pair {
+  width: 49%;
+  margin-right: 1%;
+  display: inline;
+  margin-bottom: 0;
+}
+.lt-ie9 .form-item.form-item--pair + .form-item--pair {
+  margin-right: 0;
+}
+@media screen and (min-width: 600px) {
+  .form-item.form-item--pair {
+    width: 49%;
+    margin-right: 1%;
+    display: inline;
+    margin-bottom: 0;
+  }
+  .form-item.form-item--pair + .form-item--pair {
+    margin-right: 0;
+  }
+}
+
+.form-item--small {
+  padding: 3.75px 5px;
+  font-size: 0.8125em;
+  line-height: 1.8461538em;
+}
+
+.select-dropdown select {
+  background: transparent;
+  color: #1c1c1b;
+  width: 99%;
+  padding: 4px 10px 0 10px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 0;
+  height: 30px;
+  -webkit-appearance: none;
+  position: relative;
+  z-index: 99;
+  vertical-align: middle;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+.select-dropdown select:focus {
+  outline: none;
+}
+.select-dropdown select:hover {
+  cursor: pointer;
+}
+
+.select-dropdown {
+  width: 100%;
+  height: 36px;
+  overflow: hidden;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #efefef));
+  background-image: -webkit-linear-gradient(#ffffff, #efefef);
+  background-image: -moz-linear-gradient(#ffffff, #efefef);
+  background-image: -o-linear-gradient(#ffffff, #efefef);
+  background-image: linear-gradient(#ffffff, #efefef);
+  border: 1px solid #e5e5e4;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+.select-dropdown:hover, .select-dropdown:focus {
+  border-color: #009ec7;
+  cursor: pointer;
+}
+.select-dropdown:after {
+  background: url(../svg/icon-sort.svg) transparent no-repeat 0 0;
+  height: 14px;
+  width: 8px;
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  content: ".";
+  text-indent: -999px;
+}
+
+.radio-buttons label {
+  text-transform: none;
+  color: #4b565c;
+}
+.radio-buttons input {
+  float: left;
+  margin-right: 7.5px;
+}
+
+@-moz-document url-prefix() {
+  .select-dropdown select {
+    margin-top: 3px;
+  }
+}
+
+.form-field--error label span {
+  color: #ef2602;
+}
+.form-field--error input,
+.form-field--error .select-dropdown {
+  border-color: #ef2602;
+}
+
+.comment-form label span {
+  color: #b2b2b1;
+}
+
+.form-submit {
+  margin-top: 15px;
+}
+
+.is-typeset .form-submit {
+  margin-bottom: 0;
+}
+
+/* ::Base styles */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+@media screen and (max-width: 767px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+body {
+  background: #f4f4f4;
+  color: #4b565c;
+}
+
+.accessible-hide {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* ::Import styles */
+/* ------------------------------------------------------------ */
+h1, h2, h3, h4, h5, h6, .as-para-intro, .is-typeset .intro, .as-wysiwyg p:first-of-type {
+  color: #1c1c1b;
+}
+
+p, span, cite, ol, ul, pre, label, input, textarea {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ol {
+  list-style-type: none;
+}
+
+li {
+  line-height: inherit;
+}
+
+strong, b {
+  font-weight: normal;
+  color: #1c1c1b;
+}
+
+em, i, q {
+  font-style: normal;
+}
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+  font-size: 67.5%;
+}
+
+sub {
+  top: 0.4em;
+}
+
+pre {
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+  overflow: auto;
+  font-family: "Courier New", Courier, monospace, sans-serif;
+  padding: 7.5px 15px;
+}
+pre code {
+  white-space: pre;
+  margin-top: -1.00em;
+  display: block;
+}
+
+label, legend, select {
+  display: block;
+}
+
+label {
+  color: #1c1c1b;
+  font-size: 0.8125em;
+  line-height: 1.8461538em;
+}
+label span {
+  color: #4b565c;
+  padding-left: 2px;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+label span:before {
+  content: ":";
+  color: #1c1c1b;
+  padding-right: 4px;
+}
+
+fieldset {
+  margin: 0;
+  display: block;
+  float: left;
+  width: 100%;
+  clear: both;
+}
+
+legend {
+  color: #1c1c1b;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  width: 100%;
+  background: #f9f9f9;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  background: #fff;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  *margin-top: 0;
+  line-height: normal;
+  cursor: pointer;
+}
+
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"],
+button {
+  width: auto;
+}
+
+select,
+input[type="file"] {
+  *margin-top: 4px;
+  /* In IE7, the height of the select element cannot be changed by height, only font-size */
+}
+
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.form__section, .comment-form {
+  padding: 18.75px 15px;
+  background: #fff;
+  border: 1px solid #e5e5e4;
+}
+
+.form-field {
+  position: relative;
+}
+
+.form-field--pair {
+  margin-bottom: 0.5em;
+}
+.lt-ie9 .form-field--pair {
+  width: 49%;
+  margin-right: 1%;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.lt-ie9 .form-field--pair + .form-field--pair {
+  margin-right: 0;
+}
+@media screen and (min-width: 600px) {
+  .form-field--pair {
+    width: 49%;
+    margin-right: 1%;
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .form-field--pair + .form-field--pair {
+    margin-right: 0;
+  }
+}
+
+.form-field--spaced, .is-typeset .form-submit {
+  margin-top: 1em;
+}
+
+.form-field__cancel-inline {
+  position: relative;
+}
+
+.form-field__cancel-inline__action {
+  background: url(../svg/icon-cancel.svg) transparent no-repeat 0 0;
+  height: 18px;
+  width: 18px;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  content: ".";
+  text-indent: -999px;
+}
+
+.form-item {
+  padding: 5px 7.5px;
+  border: 1px solid #e5e5e4;
+}
+.form-item.form-item--pair {
+  margin-bottom: 0.5em;
+}
+.lt-ie9 .form-item.form-item--pair {
+  width: 49%;
+  margin-right: 1%;
+  display: inline;
+  margin-bottom: 0;
+}
+.lt-ie9 .form-item.form-item--pair + .form-item--pair {
+  margin-right: 0;
+}
+@media screen and (min-width: 600px) {
+  .form-item.form-item--pair {
+    width: 49%;
+    margin-right: 1%;
+    display: inline;
+    margin-bottom: 0;
+  }
+  .form-item.form-item--pair + .form-item--pair {
+    margin-right: 0;
+  }
+}
+
+.form-item--small {
+  padding: 3.75px 5px;
+  font-size: 0.8125em;
+  line-height: 1.8461538em;
+}
+
+.select-dropdown select {
+  background: transparent;
+  color: #1c1c1b;
+  width: 99%;
+  padding: 4px 10px 0 10px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 0;
+  height: 30px;
+  -webkit-appearance: none;
+  position: relative;
+  z-index: 99;
+  vertical-align: middle;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+.select-dropdown select:focus {
+  outline: none;
+}
+.select-dropdown select:hover {
+  cursor: pointer;
+}
+
+.select-dropdown {
+  width: 100%;
+  height: 36px;
+  overflow: hidden;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #efefef));
+  background-image: -webkit-linear-gradient(#ffffff, #efefef);
+  background-image: -moz-linear-gradient(#ffffff, #efefef);
+  background-image: -o-linear-gradient(#ffffff, #efefef);
+  background-image: linear-gradient(#ffffff, #efefef);
+  border: 1px solid #e5e5e4;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+.select-dropdown:hover, .select-dropdown:focus {
+  border-color: #009ec7;
+  cursor: pointer;
+}
+.select-dropdown:after {
+  background: url(../svg/icon-sort.svg) transparent no-repeat 0 0;
+  height: 14px;
+  width: 8px;
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  content: ".";
+  text-indent: -999px;
+}
+
+.radio-buttons label {
+  text-transform: none;
+  color: #4b565c;
+}
+.radio-buttons input {
+  float: left;
+  margin-right: 7.5px;
+}
+
+@-moz-document url-prefix() {
+  .select-dropdown select {
+    margin-top: 3px;
+  }
+}
+
+.form-field--error label span {
+  color: #ef2602;
+}
+.form-field--error input,
+.form-field--error .select-dropdown {
+  border-color: #ef2602;
+}
+
+.comment-form label span {
+  color: #b2b2b1;
+}
+
+.form-submit {
+  margin-top: 15px;
+}
+
+.is-typeset .form-submit {
+  margin-bottom: 0;
+}
+
+input.parsley-success,
+select.parsley-success,
+textarea.parsley-success {
+  color: #468847;
+  background-color: #DFF0D8;
+  border: 1px solid #D6E9C6;
+}
+
+input.parsley-error,
+select.parsley-error,
+textarea.parsley-error {
+  border-color: #ef2602;
+}
+
+.parsley-errors-list {
+  margin: 11.25px 0 0 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0.875em;
+  line-height: 1.7142857em;
+  color: #ef2602;
+  transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in-;
+  -moz-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+}
+
+.parsley-errors-list.filled {
+  opacity: 1;
+}
+
+.as-heading-headline, .is-typeset .headline {
+  font-size: 2.4375em;
+  line-height: 1.2307692em;
+  line-height: 1.025641em;
+  letter-spacing: -1px;
+}
+
+.as-heading-largest, .is-typeset h1 {
+  font-size: 2.0625em;
+  line-height: 1.2121212em;
+  line-height: 0.969697em;
+  letter-spacing: -1px;
+}
+
+.as-heading-large, legend, .is-typeset h2 {
+  font-size: 1.875em;
+  line-height: 1.3333333em;
+  line-height: 1.0666667em;
+  letter-spacing: -0.5px;
+}
+
+.as-heading-medium, .is-typeset h3 {
+  font-size: 1.5625em;
+  line-height: 1.28em;
+}
+
+.as-heading-normal, .is-typeset h4, .is-typeset h5, .is-typeset h6, .is-typeset-teaser h1, .is-typeset-teaser h2, .is-typeset-teaser h3, .is-typeset-teaser h4, .is-typeset-teaser h5, .is-typeset-teaser h6, .is-typeset-teaser--minor h1, .is-typeset-teaser--minor h2, .is-typeset-teaser--minor h3, .is-typeset-teaser--minor h4, .is-typeset-teaser--minor h5, .is-typeset-teaser--minor h6, .cutin__caption__title, .venue-menu-dropdown__heading--whats-at,
+.venue-menu-dropdown__heading--whats-on {
+  font-size: 1.3125em;
+  line-height: 1.5238095em;
+}
+
+.as-heading-small, .as-para-intro, .is-typeset .intro, .as-wysiwyg p:first-of-type {
+  font-size: 1.25em;
+  line-height: 1.2em;
+}
+
+.as-heading-smallest {
+  font-size: 1.0625em;
+  line-height: 1.4117647em;
+}
+
+.as-para, .radio-buttons label, .cutin__caption__text, .hero__caption__text {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.as-unordered-list, .is-typeset ul {
+  list-style-position: outside;
+  list-style-type: disc;
+  padding-left: 0.75em;
+}
+
+.as-ordered-list, .is-typeset ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+  padding-left: 1em;
+}
+
+.as-nobullet-list {
+  list-style-type: none;
+}
+
+.as-blockquote, .as-blockquote--typeset, .is-typeset blockquote {
+  font-size: 1.3125em;
+  line-height: 1.5238095em;
+  line-height: normal;
+  border-left: 3px solid #1c1c1b;
+  padding-left: 1em;
+}
+.as-blockquote p, .as-blockquote--typeset p, .is-typeset blockquote p {
+  margin-top: 0;
+}
+.as-blockquote cite, .as-blockquote--typeset cite, .is-typeset blockquote cite {
+  display: block;
+}
+
+.as-heading-headline--typeset, .is-typeset .headline {
+  margin: 0;
+}
+
+.as-heading-largest--typeset, .is-typeset h1 {
+  margin: 0.969697em 0 0 0;
+}
+
+.as-heading-large--typeset, .is-typeset h2 {
+  margin: 1.0666667em 0 0 0;
+  letter-spacing: -0.5px;
+}
+
+.as-heading-medium--typeset, .is-typeset h3 {
+  margin: 0.96em 0 0 0;
+}
+
+.as-heading-normal--typeset, .is-typeset h4, .is-typeset h5, .is-typeset h6 {
+  margin: 1.1428571em 0 0 0;
+}
+
+.as-heading-small--typeset {
+  margin: 0.8em 0 0 0;
+}
+
+.as-heading-smallest--typeset {
+  margin: 0.9411765em 0 0 0;
+}
+
+.as-para--typeset, .is-typeset p, .is-typeset-teaser p {
+  margin: 0.5em 0 1em 0;
+}
+
+.as-para-intro--typeset, .is-typeset .intro, .as-wysiwyg p:first-of-type {
+  margin: 0.4em 0 0.8em 0;
+}
+
+.as-list--typeset, .as-unordered-list--typeset, .is-typeset ul, .as-ordered-list--typeset, .is-typeset ol {
+  margin: 1em 0;
+}
+
+.as-list-item--typeset, .as-unordered-list li, .is-typeset ul li, .as-ordered-list li, .is-typeset ol li, .as-nobullet-list li {
+  margin: 0.5em 0;
+}
+
+.as-blockquote--typeset, .is-typeset blockquote {
+  margin: 0.7619048em 0 1.5238095em;
+}
+
+.is-typeset h1:first-of-type {
+  margin-top: 0;
+}
+
+.is-typeset-teaser h1, .is-typeset-teaser h2, .is-typeset-teaser h3, .is-typeset-teaser h4, .is-typeset-teaser h5, .is-typeset-teaser h6 {
+  margin: 0.64em 0 0 0;
+}
+
+.is-typeset-teaser--minor {
+  font-size: 93%;
+}
+.is-typeset-teaser--minor h1, .is-typeset-teaser--minor h2, .is-typeset-teaser--minor h3, .is-typeset-teaser--minor h4, .is-typeset-teaser--minor h5, .is-typeset-teaser--minor h6 {
+  margin: 0.3809524em 0 0 0;
+}
+
+*[class*="colspan"] {
+  width: 100%;
+  display: block;
+}
+
+*[class*="as-grid"] {
+  float: left;
+  display: inline;
+  display: inline-block;
+}
+
+*[class*="with-trailer"] {
+  margin-bottom: 1.5em;
+}
+
+*[class*="with-leader"] {
+  margin-top: 1.5em;
+}
+
+.lt-ie9 *[class*="with-gutter"] {
+  padding-left: 3%;
+}
+@media screen and (min-width: 300px) {
+  *[class*="with-gutter"] {
+    padding-left: 3%;
+  }
+}
+
+.row {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (min-width: 300px) {
+  .row .colspan2-1 {
+    width: 50%;
+  }
+  .row .colspan2-2 {
+    width: 100%;
+  }
+  .row .push2-1 {
+    margin-left: 50%;
+  }
+  .row .push2-2 {
+    margin-left: 100%;
+  }
+  .row .pull2-1 {
+    margin-right: 50%;
+  }
+  .row .pull2-2 {
+    margin-right: 100%;
+  }
+  .row .push-disable2 {
+    margin-left: 0;
+  }
+  .row .pull-disable2 {
+    margin-right: 0;
+  }
+  .row .hide-at2 {
+    display: none;
+  }
+  .row .block-show-at2 {
+    display: block;
+  }
+  .row .inline-show-at2 {
+    display: inline;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 600px) {
+  .row {
+    padding-left: 22.5px;
+    padding-right: 22.5px;
+  }
+  .row .colspan6-1 {
+    width: 16.6666667%;
+  }
+  .row .colspan6-2 {
+    width: 33.3333333%;
+  }
+  .row .colspan6-3 {
+    width: 50%;
+  }
+  .row .colspan6-4 {
+    width: 66.6666667%;
+  }
+  .row .colspan6-5 {
+    width: 83.3333333%;
+  }
+  .row .colspan6-6 {
+    width: 100%;
+  }
+  .row .push6-1 {
+    margin-left: 16.6666667%;
+  }
+  .row .push6-2 {
+    margin-left: 33.3333333%;
+  }
+  .row .push6-3 {
+    margin-left: 50%;
+  }
+  .row .push6-4 {
+    margin-left: 66.6666667%;
+  }
+  .row .push6-5 {
+    margin-left: 83.3333333%;
+  }
+  .row .push6-6 {
+    margin-left: 100%;
+  }
+  .row .pull6-1 {
+    margin-right: 16.6666667%;
+  }
+  .row .pull6-2 {
+    margin-right: 33.3333333%;
+  }
+  .row .pull6-3 {
+    margin-right: 50%;
+  }
+  .row .pull6-4 {
+    margin-right: 66.6666667%;
+  }
+  .row .pull6-5 {
+    margin-right: 83.3333333%;
+  }
+  .row .pull6-6 {
+    margin-right: 100%;
+  }
+  .row .push-disable6 {
+    margin-left: 0;
+  }
+  .row .pull-disable6 {
+    margin-right: 0;
+  }
+  .row .hide-at6 {
+    display: none;
+  }
+  .row .block-show-at6 {
+    display: block;
+  }
+  .row .inline-show-at6 {
+    display: inline;
+    display: inline-block;
+  }
+}
+.lt-ie9 .row .colspan12-1 {
+  width: 8.3333333%;
+}
+.lt-ie9 .row .colspan12-2 {
+  width: 16.6666667%;
+}
+.lt-ie9 .row .colspan12-3 {
+  width: 25%;
+}
+.lt-ie9 .row .colspan12-4 {
+  width: 33.3333333%;
+}
+.lt-ie9 .row .colspan12-5 {
+  width: 41.6666667%;
+}
+.lt-ie9 .row .colspan12-6 {
+  width: 50%;
+}
+.lt-ie9 .row .colspan12-7 {
+  width: 58.3333333%;
+}
+.lt-ie9 .row .colspan12-8 {
+  width: 66.6666667%;
+}
+.lt-ie9 .row .colspan12-9 {
+  width: 75%;
+}
+.lt-ie9 .row .colspan12-10 {
+  width: 83.3333333%;
+}
+.lt-ie9 .row .colspan12-11 {
+  width: 91.6666667%;
+}
+.lt-ie9 .row .colspan12-12 {
+  width: 100%;
+}
+.lt-ie9 .row .push12-1 {
+  margin-left: 8.3333333%;
+}
+.lt-ie9 .row .push12-2 {
+  margin-left: 16.6666667%;
+}
+.lt-ie9 .row .push12-3 {
+  margin-left: 25%;
+}
+.lt-ie9 .row .push12-4 {
+  margin-left: 33.3333333%;
+}
+.lt-ie9 .row .push12-5 {
+  margin-left: 41.6666667%;
+}
+.lt-ie9 .row .push12-6 {
+  margin-left: 50%;
+}
+.lt-ie9 .row .push12-7 {
+  margin-left: 58.3333333%;
+}
+.lt-ie9 .row .push12-8 {
+  margin-left: 66.6666667%;
+}
+.lt-ie9 .row .push12-9 {
+  margin-left: 75%;
+}
+.lt-ie9 .row .push12-10 {
+  margin-left: 83.3333333%;
+}
+.lt-ie9 .row .push12-11 {
+  margin-left: 91.6666667%;
+}
+.lt-ie9 .row .push12-12 {
+  margin-left: 100%;
+}
+.lt-ie9 .row .pull12-1 {
+  margin-right: 8.3333333%;
+}
+.lt-ie9 .row .pull12-2 {
+  margin-right: 16.6666667%;
+}
+.lt-ie9 .row .pull12-3 {
+  margin-right: 25%;
+}
+.lt-ie9 .row .pull12-4 {
+  margin-right: 33.3333333%;
+}
+.lt-ie9 .row .pull12-5 {
+  margin-right: 41.6666667%;
+}
+.lt-ie9 .row .pull12-6 {
+  margin-right: 50%;
+}
+.lt-ie9 .row .pull12-7 {
+  margin-right: 58.3333333%;
+}
+.lt-ie9 .row .pull12-8 {
+  margin-right: 66.6666667%;
+}
+.lt-ie9 .row .pull12-9 {
+  margin-right: 75%;
+}
+.lt-ie9 .row .pull12-10 {
+  margin-right: 83.3333333%;
+}
+.lt-ie9 .row .pull12-11 {
+  margin-right: 91.6666667%;
+}
+.lt-ie9 .row .pull12-12 {
+  margin-right: 100%;
+}
+.lt-ie9 .row .push-disable12 {
+  margin-left: 0;
+}
+.lt-ie9 .row .pull-disable12 {
+  margin-right: 0;
+}
+.lt-ie9 .row .hide-at12 {
+  display: none;
+}
+.lt-ie9 .row .block-show-at12 {
+  display: block;
+}
+.lt-ie9 .row .inline-show-at12 {
+  display: inline;
+  display: inline-block;
+}
+@media screen and (min-width: 800px) {
+  .row .colspan12-1 {
+    width: 8.3333333%;
+  }
+  .row .colspan12-2 {
+    width: 16.6666667%;
+  }
+  .row .colspan12-3 {
+    width: 25%;
+  }
+  .row .colspan12-4 {
+    width: 33.3333333%;
+  }
+  .row .colspan12-5 {
+    width: 41.6666667%;
+  }
+  .row .colspan12-6 {
+    width: 50%;
+  }
+  .row .colspan12-7 {
+    width: 58.3333333%;
+  }
+  .row .colspan12-8 {
+    width: 66.6666667%;
+  }
+  .row .colspan12-9 {
+    width: 75%;
+  }
+  .row .colspan12-10 {
+    width: 83.3333333%;
+  }
+  .row .colspan12-11 {
+    width: 91.6666667%;
+  }
+  .row .colspan12-12 {
+    width: 100%;
+  }
+  .row .push12-1 {
+    margin-left: 8.3333333%;
+  }
+  .row .push12-2 {
+    margin-left: 16.6666667%;
+  }
+  .row .push12-3 {
+    margin-left: 25%;
+  }
+  .row .push12-4 {
+    margin-left: 33.3333333%;
+  }
+  .row .push12-5 {
+    margin-left: 41.6666667%;
+  }
+  .row .push12-6 {
+    margin-left: 50%;
+  }
+  .row .push12-7 {
+    margin-left: 58.3333333%;
+  }
+  .row .push12-8 {
+    margin-left: 66.6666667%;
+  }
+  .row .push12-9 {
+    margin-left: 75%;
+  }
+  .row .push12-10 {
+    margin-left: 83.3333333%;
+  }
+  .row .push12-11 {
+    margin-left: 91.6666667%;
+  }
+  .row .push12-12 {
+    margin-left: 100%;
+  }
+  .row .pull12-1 {
+    margin-right: 8.3333333%;
+  }
+  .row .pull12-2 {
+    margin-right: 16.6666667%;
+  }
+  .row .pull12-3 {
+    margin-right: 25%;
+  }
+  .row .pull12-4 {
+    margin-right: 33.3333333%;
+  }
+  .row .pull12-5 {
+    margin-right: 41.6666667%;
+  }
+  .row .pull12-6 {
+    margin-right: 50%;
+  }
+  .row .pull12-7 {
+    margin-right: 58.3333333%;
+  }
+  .row .pull12-8 {
+    margin-right: 66.6666667%;
+  }
+  .row .pull12-9 {
+    margin-right: 75%;
+  }
+  .row .pull12-10 {
+    margin-right: 83.3333333%;
+  }
+  .row .pull12-11 {
+    margin-right: 91.6666667%;
+  }
+  .row .pull12-12 {
+    margin-right: 100%;
+  }
+  .row .push-disable12 {
+    margin-left: 0;
+  }
+  .row .pull-disable12 {
+    margin-right: 0;
+  }
+  .row .hide-at12 {
+    display: none;
+  }
+  .row .block-show-at12 {
+    display: block;
+  }
+  .row .inline-show-at12 {
+    display: inline;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .row {
+    max-width: 1160px;
+  }
+}
+@media screen and (min-width: 1190px) {
+  .row {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.lt-ie9 .row {
+  width: 980px;
+}
+.lt-ie9 .row .row {
+  width: auto;
+}
+.row .row {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.row__colspaced {
+  position: relative;
+}
+.lt-ie9 .row__colspaced {
+  min-width: 103%;
+  left: -3%;
+}
+@media screen and (min-width: 300px) {
+  .row__colspaced {
+    min-width: 103%;
+    left: -3%;
+  }
+}
+.lt-ie9 .row__colspaced {
+  max-width: 100%;
+  min-width: auto;
+  left: auto;
+}
+
+.alert {
+  padding: 7.5px 15px 5px 15px;
+  color: #1c1c1b;
+  font-size: 1em;
+  line-height: 1.5em;
+  border: 1px solid #83c7bb;
+  background: #a6d7ce;
+  display: block;
+}
+
+.alert--caution {
+  background: #f2e6cd;
+  border: 1px solid #e7d2a5;
+}
+
+.archive__post {
+  position: relative;
+  margin-bottom: 2em;
+}
+.archive__post .archive__post__image-holder {
+  display: none;
+}
+.lt-ie9 .archive__post .archive__post__image-holder {
+  display: block;
+}
+.lt-ie9 .archive__post .archive__post__image-holder .venue-image--m-shed {
+  border-top: 3px solid #ec6a05;
+}
+.lt-ie9 .archive__post .archive__post__image-holder .venue-image--bristol-museum-and-art-gallery {
+  border-top: 3px solid #d7005a;
+}
+.lt-ie9 .archive__post .archive__post__image-holder .venue-image--bristol-record-office {
+  border-top: 3px solid #80378c;
+}
+.lt-ie9 .archive__post .archive__post__image-holder .venue-image--georgian-house-museum {
+  border-top: 3px solid #006771;
+}
+.lt-ie9 .archive__post .archive__post__image-holder .venue-image--red-lodge-museum {
+  border-top: 3px solid #c10a26;
+}
+.lt-ie9 .archive__post .archive__post__image-holder .venue-image--blaise-castle-house-museum {
+  border-top: 3px solid #005239;
+}
+@media screen and (min-width: 600px) {
+  .archive__post .archive__post__image-holder {
+    display: block;
+  }
+  .archive__post .archive__post__image-holder .venue-image--m-shed {
+    border-top: 3px solid #ec6a05;
+  }
+  .archive__post .archive__post__image-holder .venue-image--bristol-museum-and-art-gallery {
+    border-top: 3px solid #d7005a;
+  }
+  .archive__post .archive__post__image-holder .venue-image--bristol-record-office {
+    border-top: 3px solid #80378c;
+  }
+  .archive__post .archive__post__image-holder .venue-image--georgian-house-museum {
+    border-top: 3px solid #006771;
+  }
+  .archive__post .archive__post__image-holder .venue-image--red-lodge-museum {
+    border-top: 3px solid #c10a26;
+  }
+  .archive__post .archive__post__image-holder .venue-image--blaise-castle-house-museum {
+    border-top: 3px solid #005239;
+  }
+}
+.lt-ie9 .archive__post .archive__post__image-holder .archive__post__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 192px;
+  height: 108px;
+}
+.lt-ie9 .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback {
+  background: #d0d0d0 url(../img/sprite-logos.png) 50% top no-repeat;
+}
+@media only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .lt-ie9 .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback {
+    background-image: url(../img/sprite-logos-@2x.png);
+    background-size: 139px 1488px;
+  }
+}
+.lt-ie9 .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback.venue-service {
+  background: #d0d0d0 url(../img/bmag-logo-250.png) 50% 50% no-repeat;
+  background-size: 125px 41px;
+}
+.lt-ie9 .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback.venue-m-shed {
+  background-position: 50% -858px;
+}
+.lt-ie9 .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback.venue-bristol-museum-and-art-gallery {
+  background-position: 50% -734px;
+}
+.lt-ie9 .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback.venue-georgian-house-museum {
+  background-position: 50% -982px;
+}
+.lt-ie9 .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback.venue-red-lodge-museum {
+  background-position: 50% -1106px;
+}
+.lt-ie9 .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback.venue-blaise-castle-house-museum {
+  background-position: 50% -1230px;
+}
+.lt-ie9 .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback.venue-bristol-record-office {
+  background-position: 50% -1354px;
+}
+@media screen and (min-width: 600px) {
+  .archive__post .archive__post__image-holder .archive__post__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 192px;
+    height: 108px;
+  }
+  .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback {
+    background: #d0d0d0 url(../img/sprite-logos.png) 50% top no-repeat;
+  }
+  .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback.venue-service {
+    background: #d0d0d0 url(../img/bmag-logo-250.png) 50% 50% no-repeat;
+    background-size: 125px 41px;
+  }
+  .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback.venue-m-shed {
+    background-position: 50% -858px;
+  }
+  .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback.venue-bristol-museum-and-art-gallery {
+    background-position: 50% -734px;
+  }
+  .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback.venue-georgian-house-museum {
+    background-position: 50% -982px;
+  }
+  .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback.venue-red-lodge-museum {
+    background-position: 50% -1106px;
+  }
+  .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback.venue-blaise-castle-house-museum {
+    background-position: 50% -1230px;
+  }
+  .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback.venue-bristol-record-office {
+    background-position: 50% -1354px;
+  }
+}
+@media only screen and (min-width: 600px) and (min-device-pixel-ratio: 2), only screen and (min-width: 600px) and (min-resolution: 192dpi) {
+  .archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback {
+    background-image: url(../img/sprite-logos-@2x.png);
+    background-size: 139px 1488px;
+  }
+}
+.lt-ie9 .archive__post .archive__post__image-holder .archive__post__image {
+  width: 256px;
+  height: 144px;
+}
+@media screen and (min-width: 800px) {
+  .archive__post .archive__post__image-holder .archive__post__image {
+    width: 256px;
+    height: 144px;
+  }
+}
+.lt-ie9 .archive__post .archive__post__body {
+  padding-left: 225px;
+  min-height: 108px;
+}
+@media screen and (min-width: 600px) {
+  .archive__post .archive__post__body {
+    padding-left: 225px;
+    min-height: 108px;
+  }
+}
+.lt-ie9 .archive__post .archive__post__body {
+  padding-left: 285px;
+  min-height: 144px;
+}
+@media screen and (min-width: 800px) {
+  .archive__post .archive__post__body {
+    padding-left: 285px;
+    min-height: 144px;
+  }
+}
+.archive__post .archive__post__date {
+  background: #4b565c;
+  color: #fff;
+  display: inline-block;
+  padding: 1px 6px 0 6px;
+  margin-bottom: 1em;
+  font-size: 0.8125em;
+  line-height: 1.8461538em;
+}
+.archive__post .archive__post__date a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.article-teaser {
+  overflow: hidden;
+}
+
+.lt-ie9 .article-teaser--inline {
+  padding-right: 5%;
+}
+@media screen and (min-width: 800px) {
+  .article-teaser--inline {
+    padding-right: 5%;
+  }
+}
+
+.article-teaser__heading {
+  margin-top: 0.5em;
+}
+.lt-ie9 .article-teaser__heading {
+  font-family: 'DIN Next W01 Medium', sans-serif;
+  line-height: 1.1428571em;
+}
+@media screen and (max-width: 599px) {
+  .article-teaser__heading {
+    font-family: 'DIN Next W01 Medium', sans-serif;
+    line-height: 1.1428571em;
+  }
+}
+
+.article-teaser__heading.article-teaser__heading--no-leader {
+  margin-top: 0;
+}
+
+.article-teaser__meta {
+  color: #1c1c1b;
+  display: block;
+  font-size: 0.875em;
+  line-height: 1.7142857em;
+  line-height: 1.25em;
+  margin-top: 1.5em;
+}
+
+@media screen and (max-width: 599px) {
+  .article-teaser__excerpt {
+    display: none;
+  }
+}
+
+.article-teaser__footer {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top: #b2b2b1 solid 1px;
+}
+.lt-ie9 .article-teaser__footer {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  .article-teaser__footer {
+    display: none;
+  }
+}
+
+.button, #submit {
+  display: inline-block;
+  text-align: center;
+  padding: 0.5em 1em 0.15em 1em;
+  color: white;
+  background-color: #009ec7;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0.35em solid #008aae;
+  font-family: 'DIN Next W01 Medium', sans-serif;
+  text-decoration: none;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.button:hover, #submit:hover, .button:focus, #submit:focus, .button:active, #submit:active {
+  color: white;
+  background-color: #cd0438;
+  border-bottom-color: #b40431;
+}
+.button:active, #submit:active {
+  border-bottom-color: transparent;
+  top: 3px;
+}
+
+.button-secondary {
+  display: inline-block;
+  text-align: center;
+  padding: 0.5em 1em 0.15em 1em;
+  color: white;
+  background-color: #4faf9e;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0.35em solid #479d8e;
+  font-family: 'DIN Next W01 Medium', sans-serif;
+  text-decoration: none;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.button-secondary:hover, .button-secondary:focus, .button-secondary:active {
+  color: white;
+  background-color: #009ec7;
+  border-bottom-color: #008aae;
+}
+.button-secondary:active {
+  border-bottom-color: transparent;
+  top: 3px;
+}
+
+.button-tertiary {
+  display: inline-block;
+  text-align: center;
+  padding: 0.5em 1em 0.15em 1em;
+  color: white;
+  background-color: #cd0438;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0.35em solid #9b032a;
+  font-family: 'DIN Next W01 Medium', sans-serif;
+  text-decoration: none;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.button-tertiary:hover, .button-tertiary:focus, .button-tertiary:active {
+  color: white;
+  background-color: #009ec7;
+  border-bottom-color: #008aae;
+}
+.button-tertiary:active {
+  border-bottom-color: transparent;
+  top: 3px;
+}
+
+.button-hero {
+  display: inline-block;
+  text-align: center;
+  padding: 0.5em 1em 0.15em 1em;
+  color: #05ccff;
+  background-color: #4b565c;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0.35em solid #40494e;
+  font-family: 'DIN Next W01 Medium', sans-serif;
+  text-decoration: none;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.button-hero:hover, .button-hero:focus, .button-hero:active {
+  color: #05ccff;
+  background-color: #40494e;
+  border-bottom-color: #343c40;
+}
+.button-hero:active {
+  border-bottom-color: transparent;
+  top: 3px;
+}
+.button-hero svg, .button-hero .link--arrow {
+  width: 0.825em;
+  height: 0.825em;
+  width: 0.825rem;
+  height: 0.825rem;
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 1000px;
+  margin-left: 8px;
+}
+.button-hero svg path, .button-hero .link--arrow path {
+  fill: #05ccff;
+}
+.button-hero:hover svg path, .button-hero:focus svg path, .button-hero:active svg path {
+  fill: #05ccff;
+}
+
+.button-hero--mshed {
+  display: inline-block;
+  text-align: center;
+  padding: 0.5em 1em 0.15em 1em;
+  color: #fb9342;
+  background-color: #4b565c;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0.35em solid #40494e;
+  font-family: 'DIN Next W01 Medium', sans-serif;
+  text-decoration: none;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.button-hero--mshed:hover, .button-hero--mshed:focus, .button-hero--mshed:active {
+  color: #fb9342;
+  background-color: #40494e;
+  border-bottom-color: #343c40;
+}
+.button-hero--mshed:active {
+  border-bottom-color: transparent;
+  top: 3px;
+}
+.button-hero--mshed svg, .button-hero--mshed .link--arrow {
+  width: 0.825em;
+  height: 0.825em;
+  width: 0.825rem;
+  height: 0.825rem;
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 1000px;
+  margin-left: 8px;
+}
+.button-hero--mshed svg path, .button-hero--mshed .link--arrow path {
+  fill: #fb9342;
+}
+.button-hero--mshed:hover svg path, .button-hero--mshed:focus svg path, .button-hero--mshed:active svg path {
+  fill: #fb9342;
+}
+
+.button--medium {
+  font-size: 1.25em;
+  line-height: 1.2em;
+}
+
+.button--large {
+  font-size: 1.3125em;
+  line-height: 1.5238095em;
+}
+
+.callout-module {
+  position: relative;
+}
+
+.lt-ie9 .callout-module--set-height {
+  min-height: 350px;
+}
+@media screen and (min-width: 800px) {
+  .callout-module--set-height {
+    min-height: 350px;
+  }
+}
+
+.callout-module__image-holder {
+  display: none;
+}
+.lt-ie9 .callout-module__image-holder {
+  display: block;
+}
+.lt-ie9 .callout-module__image-holder .callout-module__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 600px) {
+  .callout-module__image-holder {
+    display: block;
+  }
+  .callout-module__image-holder .callout-module__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
+.callout-module__content {
+  padding: 0 30px 15px 30px;
+  background-color: white;
+}
+.lt-ie9 .callout-module__content {
+  width: 50%;
+  float: right;
+}
+@media screen and (min-width: 600px) {
+  .callout-module__content {
+    width: 50%;
+    float: right;
+  }
+}
+.lt-ie9 .callout-module__content h1, .lt-ie9 .callout-module__content h2, .lt-ie9 .callout-module__content h3, .lt-ie9 .callout-module__content h4, .lt-ie9 .callout-module__content h5, .lt-ie9 .callout-module__content h6, .lt-ie9 .callout-module__content p, .lt-ie9 .callout-module__content li {
+  padding-right: 3%;
+}
+@media screen and (min-width: 800px) {
+  .callout-module__content h1, .callout-module__content h2, .callout-module__content h3, .callout-module__content h4, .callout-module__content h5, .callout-module__content h6, .callout-module__content p, .callout-module__content li {
+    padding-right: 3%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .callout-module--60-40 :first-child > :first-child {
+    width: 60%;
+  }
+  .callout-module--60-40 > *:last-child {
+    width: 40%;
+  }
+}
+
+.lt-ie9 .callout-module--60-40 .callout-module__first-child {
+  width: 60%;
+}
+.lt-ie9 .callout-module--60-40 .callout-module__second-child {
+  width: 40%;
+}
+
+.lt-ie9 .callout-module--reversed .callout-module__content {
+  float: left;
+}
+.lt-ie9 .callout-module--reversed .callout-module__image {
+  right: 0;
+  left: auto;
+}
+.lt-ie9 .callout-module--reversed.callout-module--60-40 :first-child :first-child {
+  width: 40%;
+}
+.lt-ie9 .callout-module--reversed.callout-module--60-40 > *:last-child {
+  width: 60%;
+}
+@media screen and (min-width: 600px) {
+  .callout-module--reversed .callout-module__content {
+    float: left;
+  }
+  .callout-module--reversed .callout-module__image {
+    right: 0;
+    left: auto;
+  }
+  .callout-module--reversed.callout-module--60-40 :first-child :first-child {
+    width: 40%;
+  }
+  .callout-module--reversed.callout-module--60-40 > *:last-child {
+    width: 60%;
+  }
+}
+
+.lt-ie9 .callout-module--reversed.callout-module--60-40 .callout-module__first-child {
+  width: 40% !important;
+}
+.lt-ie9 .callout-module--reversed.callout-module--60-40 .callout-module__second-child {
+  width: 60% !important;
+}
+
+.comments-section {
+  border-top: 1px solid #b2b2b1;
+  margin-top: 45px;
+  padding-top: 45px;
+}
+.comments-section .comments-section__title, .comments-section .comment-reply-title {
+  font-size: 21px;
+}
+.is-typeset .comments-section .comments-section__title, .is-typeset .comments-section .comment-reply-title {
+  margin-top: 0;
+}
+.comments-section .comment-reply-title {
+  margin-bottom: 15px;
+}
+.is-typeset .comments-section .comments-list {
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.comments-section .comment {
+  background: #fff;
+  border: 1px solid #e5e5e4;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+.comments-section .comment.comment--last {
+  margin-bottom: 0;
+}
+.comment-list__item--author .comments-section .comment {
+  border-left: 3px solid #83c7bb;
+}
+.comments-section .comment__author-link,
+.comments-section .url,
+.comments-section .fn {
+  text-decoration: none;
+  color: #1c1c1b;
+  font-size: 20px;
+}
+.comment-list__item--author .comments-section .comment__author-link, .comment-list__item--author
+.comments-section .url, .comment-list__item--author
+.comments-section .fn {
+  color: #4faf9e;
+}
+.comments-section .comment__author-tag {
+  font-size: 14px;
+  color: #1c1c1b;
+}
+.comments-section .comment__time-link {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #b2b2b1;
+  font-size: 14px;
+}
+.comments-section .comment__post {
+  margin: 15px 0;
+}
+.comments-section .comment__post-buttons {
+  float: right;
+}
+.is-typeset .comments-section .comment__post-buttons {
+  margin-bottom: 0;
+}
+.comments-section .comment__reply-button, .comments-section .comment__edit-button {
+  margin-left: 15px;
+}
+.comments-section .comment__reply-button--cancel {
+  float: right;
+}
+.comments-section .comment__logged-as {
+  padding: 7.5px 0;
+}
+.comments-section .comment__logged-as__link {
+  color: #4b565c;
+  text-decoration: none;
+}
+.is-typeset .comments-section .children {
+  padding-left: 0;
+}
+.comments-section .children .comment-list__item {
+  padding-left: 45px;
+  background-image: url(../img/comment-reply.png);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  .comments-section .children .comment-list__item {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url("../img/comment-reply@2x.png");
+    background-size: 25px 42px;
+  }
+}
+.comments-section .children .comment-list__item.comment-list__item--author {
+  background-image: url(../img/comment-reply-author.png);
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  .comments-section .children .comment-list__item.comment-list__item--author {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url("../img/comment-reply-author@2x.png");
+    background-size: 25px 42px;
+  }
+}
+
+.cutin {
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  display: block;
+}
+.cutin img {
+  z-index: 1;
+  position: relative;
+  display: block;
+}
+.cutin a:hover .cutin__caption__title, .cutin a:focus .cutin__caption__title, .cutin a:active .cutin__caption__title {
+  color: #05ccff;
+}
+.cutin a:hover .link--trailing-arrow path, .cutin a:focus .link--trailing-arrow path, .cutin a:active .link--trailing-arrow path {
+  fill: #05ccff;
+}
+
+.cutin__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  z-index: 2;
+  background: #4b565c;
+  padding: 15px;
+  max-width: 80%;
+}
+
+.cutin__caption__meta {
+  color: #b2b2b1;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.cutin__caption__title {
+  color: #fff;
+  line-height: 1.1428571em;
+  text-decoration: none;
+}
+
+.cutin__caption__text {
+  color: #fff;
+}
+
+.sidebar-filter {
+  float: right;
+}
+
+.filter {
+  overflow: hidden;
+  border: 1px solid #e5e5e4;
+}
+
+.filter__tabs__heading {
+  background: #83c7bb;
+  padding: 10px 15px;
+}
+
+.filter__tab {
+  padding: 15px;
+  background: #fff;
+  border-top: 1px solid #e5e5e4;
+}
+.filter__tab a {
+  text-decoration: none;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+.filter__tab a:hover .filter__tab__value, .filter__tab a:focus .filter__tab__value, .filter__tab a:active .filter__tab__value {
+  color: #1c1c1b;
+}
+
+.filter__tab--first {
+  border: 0;
+}
+
+.filter__tab__value {
+  display: block;
+  color: #1c1c1b;
+  line-height: 1.125em;
+}
+
+.filter__tab__adjust {
+  font-size: 14px;
+  display: block;
+  text-decoration: underline;
+}
+
+.filter__options {
+  background: #4b565c;
+  color: #fff;
+  padding: 15px;
+  position: relative;
+  display: none;
+}
+.filter__options:before {
+  width: 0px;
+  height: 0px;
+  content: ".";
+  text-indent: -999px;
+  border-style: solid;
+  border-width: 0 10px 12px 10px;
+  border-color: transparent transparent #4b565c transparent;
+  position: absolute;
+  top: -10px;
+  left: 15px;
+}
+
+.filter__option {
+  margin-bottom: 0.5em;
+  line-height: 1.25em;
+}
+.filter__option:last-child {
+  margin-bottom: 0;
+}
+.filter__option a {
+  color: #fff;
+}
+.filter__option a:hover, .filter__option a:focus, .filter__option a:active {
+  color: #05ccff;
+}
+
+.filter__options__utility {
+  margin-top: 1.5em;
+}
+.filter__options__utility + .filter__options__utility {
+  margin: 0 0 1em 0;
+}
+
+.filter__options__utility--form label {
+  color: #fff;
+}
+
+.filter__option--minor {
+  font-size: 0.875em;
+  line-height: 1.7142857em;
+  float: right;
+}
+
+.filter__option--logo {
+  text-indent: -999em;
+  width: 49%;
+  margin-right: 1%;
+  height: auto;
+  background: #333;
+  float: left;
+  display: inline-block;
+  margin-bottom: 1%;
+  height: 100px;
+}
+.filter__option--logo:nth-child(odd) {
+  margin-right: 0;
+}
+.filter__option--logo a {
+  background-color: #4b565c;
+  display: block;
+  height: 100px;
+  width: 100%;
+}
+
+.filter__option--logo--m-shed a {
+  background: url(../svg/logo-mshed.svg) #40494e no-repeat center center;
+  background-size: 80% 80%;
+}
+.filter__option--logo--m-shed a:hover, .filter__option--logo--m-shed a:focus, .filter__option--logo--m-shed a .filter__option--logo--selected {
+  background-color: #ec6a05;
+}
+
+.filter__option--logo--bristol-museum-and-art-gallery a {
+  background: url(../svg/logo-bmag.svg) #40494e no-repeat center center;
+  background-size: 80% 80%;
+}
+.filter__option--logo--bristol-museum-and-art-gallery a:hover, .filter__option--logo--bristol-museum-and-art-gallery a:focus, .filter__option--logo--bristol-museum-and-art-gallery a .filter__option--logo--selected {
+  background-color: #d7005a;
+}
+
+.filter__option--logo--bristol-record-office a {
+  background: url(../svg/logo-bro.svg) #40494e no-repeat center center;
+  background-size: 85% 85%;
+}
+.filter__option--logo--bristol-record-office a:hover, .filter__option--logo--bristol-record-office a:focus, .filter__option--logo--bristol-record-office a .filter__option--logo--selected {
+  background-color: #80378c;
+}
+
+.filter__option--logo--red-lodge-museum a {
+  background: url(../svg/logo-rlm.svg) #40494e no-repeat center center;
+  background-size: 80% 80%;
+}
+.filter__option--logo--red-lodge-museum a:hover, .filter__option--logo--red-lodge-museum a:focus, .filter__option--logo--red-lodge-museum a .filter__option--logo--selected {
+  background-color: #c10a26;
+}
+
+.filter__option--logo--georgian-house-museum a {
+  background: url(../svg/logo-ghm.svg) #40494e no-repeat center center;
+  background-size: 80% 80%;
+}
+.filter__option--logo--georgian-house-museum a:hover, .filter__option--logo--georgian-house-museum a:focus, .filter__option--logo--georgian-house-museum a .filter__option--logo--selected {
+  background-color: #006771;
+}
+
+.filter__option--logo--blaise-castle-house-museum a {
+  background: url(../svg/logo-bchm.svg) #40494e no-repeat center center;
+  background-size: 65% 65%;
+}
+.filter__option--logo--blaise-castle-house-museum a:hover, .filter__option--logo--blaise-castle-house-museum a:focus, .filter__option--logo--blaise-castle-house-museum a .filter__option--logo--selected {
+  background-color: #005239;
+}
+
+.venue-footer, .global-footer {
+  background: #4b565c;
+  padding: 60px 0 45px 0;
+}
+.venue-footer p, .global-footer p, .venue-footer h1, .global-footer h1, .venue-footer h2, .global-footer h2, .venue-footer h3, .global-footer h3, .venue-footer h4, .global-footer h4, .venue-footer h5, .global-footer h5, .venue-footer h6, .global-footer h6, .venue-footer li, .global-footer li {
+  color: #fff;
+}
+.venue-footer p, .global-footer p, .venue-footer ul, .global-footer ul, .venue-footer ol, .global-footer ol {
+  margin-top: 1em;
+}
+.venue-footer a, .global-footer a {
+  color: #05ccff;
+}
+.venue-footer a:hover, .global-footer a:hover, .venue-footer a:focus, .global-footer a:focus, .venue-footer a:active, .global-footer a:active {
+  color: #fff;
+}
+
+.venue-footer__logo {
+  display: block;
+}
+.svg .venue-footer__logo {
+  background-image: none;
+  width: auto;
+  height: auto;
+  text-indent: 0;
+}
+.venue-footer__logo svg {
+  max-height: 120px;
+  max-width: 120px;
+  width: auto;
+  height: auto;
+  fill: white;
+}
+.venue-footer__logo svg path {
+  fill: white;
+}
+
+.global-footer__logo {
+  display: block;
+  background: url(../img/logo-arts-council.png) transparent no-repeat center center;
+  background-size: contain;
+  width: 200px;
+  height: 65px;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  .global-footer__logo {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url("../img/logo-arts-council@2x.png");
+    background-size: 200px 65px;
+  }
+}
+.svg .global-footer__logo {
+  background-image: none;
+}
+.global-footer__logo svg {
+  width: 100%;
+  height: 100%;
+  fill: white;
+}
+.global-footer__logo svg path {
+  fill: white;
+}
+
+.global-footer__logo--hlf {
+  margin-top: 1em;
+  width: 200px;
+  height: 28px;
+  background: url(../img/logo-heritage-lottery-fund.png) transparent no-repeat center center;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  .global-footer__logo--hlf {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url("../img/logo-heritage-lottery-fund@2x.png");
+    background-size: 200px 28px;
+  }
+}
+.svg .global-footer__logo--hlf {
+  background-image: none;
+}
+.global-footer__logo--hlf svg {
+  width: 100%;
+  height: 100%;
+  fill: white;
+}
+.global-footer__logo--hlf svg path {
+  fill: white;
+}
+
+.global-footer {
+  margin-top: 0;
+  background: #56636a;
+  padding: 45px 0;
+}
+.global-footer a {
+  color: #fff;
+}
+
+p.global-footer__tc {
+  font-size: 0.8125em;
+  line-height: 1.8461538em;
+}
+.lt-ie9 p.global-footer__tc {
+  text-align: right;
+}
+@media screen and (min-width: 600px) {
+  p.global-footer__tc {
+    text-align: right;
+  }
+}
+p.global-footer__tc .global-footer__tc__link {
+  margin-left: 15px;
+}
+
+.global-header {
+  padding: 0 0 7.5px 0;
+  height: 128px;
+  background-color: #4b565c;
+  overflow: hidden;
+  position: relative;
+}
+.global-header .row {
+  position: relative;
+}
+.lt-ie9 .global-header {
+  height: auto;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+}
+@media screen and (min-width: 800px) {
+  .global-header {
+    height: auto;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+  }
+}
+
+.global-header-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  padding: 5px 12px;
+  display: none;
+}
+.global-header-toggle:hover, .global-header-toggle:focus, .global-header-toggle:active {
+  background: #009ec7;
+  color: #fff;
+}
+.lt-ie9 .global-header-toggle {
+  display: inline-block;
+}
+@media screen and (min-width: 800px) {
+  .global-header-toggle {
+    display: inline-block;
+  }
+}
+
+.global-logo {
+  display: none;
+}
+.lt-ie9 .global-logo {
+  display: block;
+  background: url(../img/logo-global.png) transparent no-repeat center center;
+  text-indent: -999em;
+  background-size: contain;
+  width: 180px;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  .lt-ie9 .global-logo {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url("../img/logo-global@2x.png");
+    background-size: 180px 80px;
+  }
+}
+.lt-ie9 .global-logo a {
+  width: 180px;
+  height: 80px;
+  display: block;
+}
+.svg .lt-ie9 .global-logo {
+  background-image: url(../svg/logo/global.svg);
+}
+@media screen and (min-width: 800px) {
+  .global-logo {
+    display: block;
+    background: url(../img/logo-global.png) transparent no-repeat center center;
+    text-indent: -999em;
+    background-size: contain;
+    width: 180px;
+  }
+  .global-logo a {
+    width: 180px;
+    height: 80px;
+    display: block;
+  }
+  .svg .global-logo {
+    background-image: url(../svg/logo/global.svg);
+  }
+}
+@media screen and (min-width: 800px) and (min--moz-device-pixel-ratio: 1.3), screen and (min-width: 800px) and (-o-min-device-pixel-ratio: 2.6 / 2), screen and (min-width: 800px) and (-webkit-min-device-pixel-ratio: 1.3), screen and (min-width: 800px) and (min-device-pixel-ratio: 1.3), screen and (min-width: 800px) and (min-resolution: 1.3dppx) {
+  .global-logo {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url("../img/logo-global@2x.png");
+    background-size: 180px 80px;
+  }
+}
+
+.global-header__logo {
+  position: absolute;
+  top: 15%;
+  right: 4%;
+  background-image: url(../svg/logo/global.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 130px;
+  height: 50%;
+}
+.lt-ie9 .global-header__logo {
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  .global-header__logo {
+    display: none;
+  }
+}
+
+.global-header__logo--m-shed {
+  background-image: url(../svg/logo-mshed.svg);
+  width: 80px;
+}
+.lt-ie9 .global-header__logo--m-shed {
+  background-image: none;
+}
+@media screen and (min-width: 800px) {
+  .global-header__logo--m-shed {
+    background-image: none;
+  }
+}
+
+.global-header__logo--bristol-museum-and-art-gallery {
+  background-image: url(../svg/logo-bmag.svg);
+  top: 12%;
+  width: 94px;
+}
+.lt-ie9 .global-header__logo--bristol-museum-and-art-gallery {
+  background-image: none;
+}
+@media screen and (min-width: 800px) {
+  .global-header__logo--bristol-museum-and-art-gallery {
+    background-image: none;
+  }
+}
+
+.global-header__logo--georgian-house-museum {
+  background-image: url(../svg/logo-ghm.svg);
+  top: 10%;
+  right: 1%;
+  width: 116px;
+  height: 55%;
+}
+.lt-ie9 .global-header__logo--georgian-house-museum {
+  background-image: none;
+}
+@media screen and (min-width: 800px) {
+  .global-header__logo--georgian-house-museum {
+    background-image: none;
+  }
+}
+
+.global-header__logo--blaise-castle-house-museum {
+  background-image: url(../svg/logo-bchm.svg);
+  top: 6%;
+  right: 1%;
+  width: 110px;
+  height: 58%;
+}
+.lt-ie9 .global-header__logo--blaise-castle-house-museum {
+  background-image: none;
+}
+@media screen and (min-width: 800px) {
+  .global-header__logo--blaise-castle-house-museum {
+    background-image: none;
+  }
+}
+
+.global-header__logo--red-lodge-museum {
+  background-image: url(../svg/logo-rlm.svg);
+  top: 4%;
+  right: 0%;
+  width: 120px;
+  height: 60%;
+}
+.lt-ie9 .global-header__logo--red-lodge-museum {
+  background-image: none;
+}
+@media screen and (min-width: 800px) {
+  .global-header__logo--red-lodge-museum {
+    background-image: none;
+  }
+}
+
+.global-header__logo--bristol-record-office {
+  background-image: url(../svg/logo-bro.svg);
+  top: 12%;
+  width: 100px;
+}
+.lt-ie9 .global-header__logo--bristol-record-office {
+  background-image: none;
+}
+@media screen and (min-width: 800px) {
+  .global-header__logo--bristol-record-office {
+    background-image: none;
+  }
+}
+
+.hero {
+  background-color: #b2b2b1;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.lt-ie9 .hero {
+  padding-top: 6em;
+  padding-bottom: 2.5em;
+}
+@media screen and (min-width: 800px) {
+  .hero {
+    padding-top: 6em;
+    padding-bottom: 2.5em;
+  }
+}
+.lt-ie9 .hero {
+  padding-top: 7em;
+}
+@media screen and (min-width: 960px) {
+  .hero {
+    padding-top: 7em;
+  }
+}
+.lt-ie9 .hero {
+  padding-top: 9em;
+}
+@media screen and (min-width: 1080px) {
+  .hero {
+    padding-top: 9em;
+  }
+}
+.lt-ie9 .hero {
+  padding-top: 10em;
+}
+@media screen and (min-width: 1190px) {
+  .hero {
+    padding-top: 10em;
+  }
+}
+
+.hero__caption {
+  background-color: #4b565c;
+  background-color: rgba(75, 86, 92, 0.85);
+  padding: 30px;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.lt-ie9 .hero__caption {
+  font-size: 90%;
+}
+@media screen and (max-width: 799px) {
+  .hero__caption {
+    font-size: 90%;
+  }
+}
+.lt-ie9 .hero__caption {
+  width: 60%;
+  float: left;
+}
+@media screen and (min-width: 800px) {
+  .hero__caption {
+    width: 60%;
+    float: left;
+  }
+}
+.lt-ie9 .hero__caption {
+  width: 50%;
+}
+@media screen and (min-width: 960px) {
+  .hero__caption {
+    width: 50%;
+  }
+}
+.lt-ie9 .hero__caption {
+  width: 55%;
+}
+@media screen and (min-width: 1080px) {
+  .hero__caption {
+    width: 55%;
+  }
+}
+.lt-ie9 .hero__caption {
+  left: -30px;
+}
+@media screen and (min-width: 1190px) {
+  .hero__caption {
+    left: -30px;
+  }
+}
+
+.hero__caption--cta {
+  padding-bottom: 37.5px;
+  margin-bottom: 2em;
+}
+.lt-ie9 .hero__caption--cta {
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 800px) {
+  .hero__caption--cta {
+    margin-bottom: 1em;
+  }
+}
+
+.hero__caption--cta--button {
+  position: absolute;
+  bottom: -15px;
+  right: 30px;
+}
+.hero__caption--cta--button:active {
+  top: auto;
+  bottom: -20px;
+  border-bottom-color: transparent;
+}
+
+.hero__caption__heading {
+  font-size: 3em;
+  line-height: 1.1666667em;
+  line-height: 1em;
+  letter-spacing: -1px;
+  color: #ddd;
+}
+.hero__caption__heading span {
+  line-height: inherit;
+  color: #05ccff;
+}
+.hero__caption__heading:first-line {
+  line-height: inherit;
+  color: #00c6fa;
+}
+
+.hero__caption__meta {
+  color: #b2b2b1;
+  font-size: 1.25em;
+  line-height: 1.2em;
+  margin-bottom: 0.8em;
+  display: block;
+}
+
+.hero__caption__text {
+  margin-top: 0.3333333em;
+  color: #fff;
+}
+.hero__caption__text br {
+  display: none;
+}
+
+.hero__aside {
+  background-color: #f4f4f4;
+  background-color: rgba(244, 244, 244, 0.85);
+  padding: 15px;
+  position: relative;
+}
+.lt-ie9 .hero__aside {
+  width: 30%;
+  float: right;
+}
+@media screen and (min-width: 800px) {
+  .hero__aside {
+    width: 30%;
+    float: right;
+  }
+}
+.lt-ie9 .hero__aside {
+  width: 36%;
+}
+@media screen and (min-width: 960px) {
+  .hero__aside {
+    width: 36%;
+  }
+}
+
+body.bristol-museum-and-art-gallery .hero__caption__heading:first-line {
+  color: #ff71ac;
+}
+body.bristol-museum-and-art-gallery .hero__caption--cta--button {
+  color: #ff71ac;
+}
+body.bristol-museum-and-art-gallery .hero__caption--cta--button svg path {
+  fill: #ff71ac;
+}
+
+body.m-shed .hero__caption__heading:first-line {
+  color: #fa852a;
+}
+body.m-shed .hero__caption--cta--button {
+  color: #fa852a;
+}
+body.m-shed .hero__caption--cta--button svg path {
+  fill: #fa852a;
+}
+
+body.georgian-house-museum .hero__caption__heading:first-line {
+  color: #00c4d7;
+}
+body.georgian-house-museum .hero__caption--cta--button {
+  color: #00c4d7;
+}
+body.georgian-house-museum .hero__caption--cta--button svg path {
+  fill: #00c4d7;
+}
+
+body.red-lodge-museum .hero__caption__heading:first-line {
+  color: #f76d82;
+}
+body.red-lodge-museum .hero__caption--cta--button {
+  color: #f76d82;
+}
+body.red-lodge-museum .hero__caption--cta--button svg path {
+  fill: #f76d82;
+}
+
+body.blaise-castle-house-museum .hero__caption__heading:first-line {
+  color: #00d292;
+}
+body.blaise-castle-house-museum .hero__caption--cta--button {
+  color: #00d292;
+}
+body.blaise-castle-house-museum .hero__caption--cta--button svg path {
+  fill: #00d292;
+}
+
+body.bristol-record-office .hero__caption__heading:first-line {
+  color: #c78bd1;
+}
+body.bristol-record-office .hero__caption--cta--button {
+  color: #c78bd1;
+}
+body.bristol-record-office .hero__caption--cta--button svg path {
+  fill: #c78bd1;
+}
+
+.hero__opening-times {
+  padding: 2%;
+}
+.lt-ie9 .hero__opening-times {
+  padding: 1% 2%;
+}
+@media screen and (min-width: 960px) {
+  .hero__opening-times {
+    padding: 1% 2%;
+  }
+}
+
+.hero__opening-times__status {
+  margin-bottom: 1em;
+  padding: 22.5px 15px 22.5px 30px;
+  background-color: #009ec7;
+  background-color: rgba(0, 158, 199, 0.85);
+}
+.lt-ie9 .hero__opening-times__status {
+  padding: 22.5px 15px 22.5px 45px;
+  margin-left: -45px;
+}
+@media screen and (min-width: 800px) {
+  .hero__opening-times__status {
+    padding: 22.5px 15px 22.5px 45px;
+    margin-left: -45px;
+  }
+}
+.m-shed .hero__opening-times__status {
+  background-color: #ec6a05;
+  background-color: rgba(236, 106, 5, 0.85);
+}
+.bristol-museum-and-art-gallery .hero__opening-times__status {
+  background-color: #d7005a;
+  background-color: rgba(215, 0, 90, 0.85);
+}
+.georgian-house-museum .hero__opening-times__status {
+  background-color: #006771;
+  background-color: rgba(0, 103, 113, 0.85);
+}
+.red-lodge-museum .hero__opening-times__status {
+  background-color: #c10a26;
+  background-color: rgba(193, 10, 38, 0.85);
+}
+.blaise-castle-house-museum .hero__opening-times__status {
+  background-color: #005239;
+  background-color: rgba(0, 82, 57, 0.85);
+}
+.bristol-record-office .hero__opening-times__status {
+  background-color: #80378c;
+  background-color: rgba(128, 55, 140, 0.85);
+}
+
+.hero__opening-times__status__title {
+  font-size: 1.25em;
+  line-height: 1.2em;
+  color: white;
+}
+
+.hero__opening-times__status__text {
+  color: white;
+}
+
+.highlight, pre, .callout-module, .highlight--section, .highlight-module, .wp-pagenavi, .responsive-tabs .tab__item a:hover, .responsive-tabs .tab__item a:focus, .responsive-tabs .tab__item a:active, .responsive-tabs .tab__item.resp-tab-active a, .responsive-tabs .resp-accordian__heading a:hover, .responsive-tabs .resp-accordian__heading a:focus, .responsive-tabs .resp-accordian__heading a:active {
+  background: #fff;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.highlight--section {
+  padding-bottom: 3em;
+}
+
+.highlight--section__heading {
+  font-size: 1.3125em;
+  line-height: 1.5238095em;
+}
+
+.highlight-module + .highlight-module {
+  margin-top: 1em;
+}
+
+.highlight-module--contrast {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #e5e5e4;
+}
+
+.highlight-module__header {
+  background: #83c7bb;
+  padding: 15px 22.5px;
+}
+
+.highlight-module__body {
+  background: #fff;
+  padding: 15px 22.5px;
+}
+.highlight-module__body h4 {
+  margin-top: 0;
+}
+.highlight-module__body + .highlight-module__body {
+  padding-top: 0.5em;
+  border-top: 1px #e5e5e4 solid;
+}
+.highlight-module__body + .highlight-module__body h4 {
+  margin-top: 0.5em;
+}
+
+.as-wysiwyg .highlight-module__full-bleed .venue-map img {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.highlight-module__full-bleed img {
+  vertical-align: top;
+}
+
+a {
+  color: #009ec7;
+  text-decoration: underline;
+}
+a:hover, a:focus, a:active {
+  color: #cd0438;
+}
+a:not(> img) {
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -hp-pre-wrap;
+  word-wrap: break-word;
+  border-bottom: 0;
+}
+a:not(.button) {
+  -webkit-transition: color 0.2s ease-in-out;
+  -webkit-transition-delay: 0s;
+  -moz-transition: color 0.2s ease-in-out 0s;
+  -o-transition: color 0.2s ease-in-out 0s;
+  transition: color 0.2s ease-in-out 0s;
+}
+
+.link--inverse {
+  color: #cd0438;
+}
+.link--inverse:hover, .link--inverse:focus, .link--inverse:active {
+  color: #009ec7;
+}
+
+.link--no-decoration {
+  text-decoration: none;
+}
+
+.link--trailing-arrow {
+  -webkit-transition: color 0.2s ease-in-out;
+  -webkit-transition-delay: 0s;
+  -moz-transition: color 0.2s ease-in-out 0s;
+  -o-transition: color 0.2s ease-in-out 0s;
+  transition: color 0.2s ease-in-out 0s;
+}
+.link--trailing-arrow svg, .link--trailing-arrow .link--arrow {
+  width: 0.825em;
+  height: 0.825em;
+  width: 0.825rem;
+  height: 0.825rem;
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 1000px;
+  margin-left: 8px;
+}
+.link--trailing-arrow svg path, .link--trailing-arrow .link--arrow path {
+  fill: #009ec7;
+}
+.link--trailing-arrow:hover svg path, .link--trailing-arrow:focus svg path, .link--trailing-arrow:active svg path {
+  fill: #cd0438;
+}
+
+.navigation {
+  position: relative;
+  z-index: 0;
+  background-color: #e7e7e7;
+}
+
+.navigation__menu {
+  display: none;
+}
+.lt-ie9 .navigation__menu {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: 10%;
+  max-height: 200px;
+}
+@media screen and (min-width: 800px) {
+  .navigation__menu {
+    display: block;
+    position: relative;
+    z-index: 1;
+    height: 10%;
+    max-height: 200px;
+  }
+}
+
+.navigation__item {
+  z-index: 2;
+  width: 14.2857143%;
+  display: inline;
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+}
+.navigation__item .navigation__wrapper {
+  height: 0;
+  width: 130%;
+  margin-left: -20%;
+  padding-bottom: 90%;
+  position: relative;
+  z-index: 1;
+}
+.navigation__item .navigation__svg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  fill: #b2b2b1;
+}
+.navigation__item .navigation__svg path {
+  fill: #b2b2b1;
+}
+
+.navigation__item .navigation__wrapper.ico {
+  width: 111px;
+  height: 99px;
+  display: block;
+  padding-bottom: 0;
+  margin: 0;
+}
+.svg .navigation__item .navigation__wrapper.ico {
+  background-image: none;
+  height: 0;
+  width: 130%;
+  margin-left: -15%;
+  padding-bottom: 90%;
+  display: block;
+}
+.svg .navigation__item .navigation__wrapper.ico .navigation__item__link {
+  padding: 10% 20%;
+}
+.svg .navigation__item .navigation__wrapper.ico .navigation__svg {
+  display: block;
+}
+
+.navigation__item__link {
+  z-index: 3;
+  position: relative;
+  padding: 10% 20%;
+  display: block;
+  height: 100%;
+}
+.navigation__menu--hoverintent .navigation__item:hover .navigation__item__link, .navigation__item__link:hover, .navigation__item__link:focus, .navigation__item__link:active {
+  background: white;
+}
+.navigation__menu--hoverintent .navigation__item:hover .navigation__item__link .navigation__svg, .navigation__menu--hoverintent .navigation__item:hover .navigation__item__link .navigation__svg path, .navigation__item__link:hover .navigation__svg, .navigation__item__link:hover .navigation__svg path, .navigation__item__link:focus .navigation__svg, .navigation__item__link:focus .navigation__svg path, .navigation__item__link:active .navigation__svg, .navigation__item__link:active .navigation__svg path {
+  fill: white;
+}
+.navigation__item__link.current {
+  background: #009ec7;
+}
+.navigation__item__link.current .navigation__svg, .navigation__item__link.current .navigation__svg path {
+  fill: white !important;
+}
+.navigation__item__link.current:hover .navigation__svg, .navigation__item__link.current:hover .navigation__svg path, .navigation__item__link.current:focus .navigation__svg, .navigation__item__link.current:focus .navigation__svg path, .navigation__item__link.current:active .navigation__svg, .navigation__item__link.current:active .navigation__svg path {
+  fill: white;
+}
+.lt-ie9 .navigation__item__link {
+  padding: 15px;
+}
+
+.current {
+  fill: #fff;
+}
+
+.navigation__item__link--service .navigation__svg {
+  max-height: 70px;
+  margin-top: 0;
+}
+.lt-ie9 .navigation__item__link--service .navigation__svg {
+  margin-top: 5px;
+}
+@media screen and (min-width: 960px) {
+  .navigation__item__link--service .navigation__svg {
+    margin-top: 5px;
+  }
+}
+.navigation__item__link--service.current {
+  background: #009ec7 !important;
+}
+.navigation__menu--hoverintent .navigation__item:hover .navigation__item__link--service .navigation__svg, .navigation__menu--hoverintent .navigation__item:hover .navigation__item__link--service .navigation__svg path, .navigation__item__link--service:hover .navigation__svg, .navigation__item__link--service:hover .navigation__svg path, .navigation__item__link--service:focus .navigation__svg, .navigation__item__link--service:focus .navigation__svg path, .navigation__item__link--service:active .navigation__svg, .navigation__item__link--service:active .navigation__svg path {
+  fill: #009ec7;
+}
+
+.navigation__item__link--bristol-museum-and-art-gallery.current {
+  background: #d7005a !important;
+}
+.navigation__menu--hoverintent .navigation__item:hover .navigation__item__link--bristol-museum-and-art-gallery .navigation__svg, .navigation__menu--hoverintent .navigation__item:hover .navigation__item__link--bristol-museum-and-art-gallery .navigation__svg path, .navigation__item__link--bristol-museum-and-art-gallery:hover .navigation__svg, .navigation__item__link--bristol-museum-and-art-gallery:hover .navigation__svg path, .navigation__item__link--bristol-museum-and-art-gallery:focus .navigation__svg, .navigation__item__link--bristol-museum-and-art-gallery:focus .navigation__svg path, .navigation__item__link--bristol-museum-and-art-gallery:active .navigation__svg, .navigation__item__link--bristol-museum-and-art-gallery:active .navigation__svg path {
+  fill: #d7005a;
+}
+
+.navigation__item__link--m-shed.current {
+  background: #ec6a05 !important;
+}
+.navigation__menu--hoverintent .navigation__item:hover .navigation__item__link--m-shed .navigation__svg, .navigation__menu--hoverintent .navigation__item:hover .navigation__item__link--m-shed .navigation__svg path, .navigation__item__link--m-shed:hover .navigation__svg, .navigation__item__link--m-shed:hover .navigation__svg path, .navigation__item__link--m-shed:focus .navigation__svg, .navigation__item__link--m-shed:focus .navigation__svg path, .navigation__item__link--m-shed:active .navigation__svg, .navigation__item__link--m-shed:active .navigation__svg path {
+  fill: #ec6a05;
+}
+
+.navigation__item__link--georgian-house-museum.current {
+  background: #006771 !important;
+}
+.navigation__menu--hoverintent .navigation__item:hover .navigation__item__link--georgian-house-museum .navigation__svg, .navigation__menu--hoverintent .navigation__item:hover .navigation__item__link--georgian-house-museum .navigation__svg path, .navigation__item__link--georgian-house-museum:hover .navigation__svg, .navigation__item__link--georgian-house-museum:hover .navigation__svg path, .navigation__item__link--georgian-house-museum:focus .navigation__svg, .navigation__item__link--georgian-house-museum:focus .navigation__svg path, .navigation__item__link--georgian-house-museum:active .navigation__svg, .navigation__item__link--georgian-house-museum:active .navigation__svg path {
+  fill: #006771;
+}
+
+.navigation__item__link--red-lodge-museum.current {
+  background: #c10a26 !important;
+}
+.navigation__menu--hoverintent .navigation__item:hover .navigation__item__link--red-lodge-museum .navigation__svg, .navigation__menu--hoverintent .navigation__item:hover .navigation__item__link--red-lodge-museum .navigation__svg path, .navigation__item__link--red-lodge-museum:hover .navigation__svg, .navigation__item__link--red-lodge-museum:hover .navigation__svg path, .navigation__item__link--red-lodge-museum:focus .navigation__svg, .navigation__item__link--red-lodge-museum:focus .navigation__svg path, .navigation__item__link--red-lodge-museum:active .navigation__svg, .navigation__item__link--red-lodge-museum:active .navigation__svg path {
+  fill: #c10a26;
+}
+
+.navigation__item__link--blaise-castle-house-museum.current {
+  background: #005239 !important;
+}
+.navigation__menu--hoverintent .navigation__item:hover .navigation__item__link--blaise-castle-house-museum .navigation__svg, .navigation__menu--hoverintent .navigation__item:hover .navigation__item__link--blaise-castle-house-museum .navigation__svg path, .navigation__item__link--blaise-castle-house-museum:hover .navigation__svg, .navigation__item__link--blaise-castle-house-museum:hover .navigation__svg path, .navigation__item__link--blaise-castle-house-museum:focus .navigation__svg, .navigation__item__link--blaise-castle-house-museum:focus .navigation__svg path, .navigation__item__link--blaise-castle-house-museum:active .navigation__svg, .navigation__item__link--blaise-castle-house-museum:active .navigation__svg path {
+  fill: #005239;
+}
+
+.navigation__item__link--bristol-record-office.current {
+  background: #80378c !important;
+}
+.navigation__item__link--bristol-record-office .navigation__svg {
+  margin-top: 6px;
+}
+.navigation__menu--hoverintent .navigation__item:hover .navigation__item__link--bristol-record-office .navigation__svg, .navigation__menu--hoverintent .navigation__item:hover .navigation__item__link--bristol-record-office .navigation__svg path, .navigation__item__link--bristol-record-office:hover .navigation__svg, .navigation__item__link--bristol-record-office:hover .navigation__svg path, .navigation__item__link--bristol-record-office:focus .navigation__svg, .navigation__item__link--bristol-record-office:focus .navigation__svg path, .navigation__item__link--bristol-record-office:active .navigation__svg, .navigation__item__link--bristol-record-office:active .navigation__svg path {
+  fill: #80378c;
+}
+
+.sub-navigation {
+  position: relative;
+  background: #0096bd;
+}
+@media screen and (max-width: 799px) {
+  .sub-navigation {
+    background: white;
+  }
+}
+
+.sub-navigation--home {
+  background: #0096bd;
+}
+@media screen and (max-width: 799px) {
+  .sub-navigation--home {
+    background: white;
+  }
+}
+
+.sub-navigation--bristol-museum-and-art-gallery {
+  background: #cd0056;
+}
+@media screen and (max-width: 799px) {
+  .sub-navigation--bristol-museum-and-art-gallery {
+    background: white;
+  }
+}
+
+.sub-navigation--m-shed {
+  background: #e26605;
+}
+@media screen and (max-width: 799px) {
+  .sub-navigation--m-shed {
+    background: white;
+  }
+}
+
+.sub-navigation--georgian-house-museum {
+  background: #005e67;
+}
+@media screen and (max-width: 799px) {
+  .sub-navigation--georgian-house-museum {
+    background: white;
+  }
+}
+
+.sub-navigation--red-lodge-museum {
+  background: #b70924;
+}
+@media screen and (max-width: 799px) {
+  .sub-navigation--red-lodge-museum {
+    background: white;
+  }
+}
+
+.sub-navigation--blaise-castle-house-museum {
+  background: #004832;
+}
+@media screen and (max-width: 799px) {
+  .sub-navigation--blaise-castle-house-museum {
+    background: white;
+  }
+}
+
+.sub-navigation--bristol-record-office {
+  background: #763381;
+}
+@media screen and (max-width: 799px) {
+  .sub-navigation--bristol-record-office {
+    background: white;
+  }
+}
+
+.sub-navigation__menu {
+  position: relative;
+}
+
+.sub-navigation__item {
+  display: inline-block;
+  position: relative;
+}
+.sub-navigation__item a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 7.5px 10px 7.5px 10px;
+}
+.sub-navigation__item a:hover, .sub-navigation__item a:focus, .sub-navigation__item a:active {
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -webkit-transition-delay: 0s;
+  -moz-transition: background-color 0.2s ease-in-out 0s;
+  -o-transition: background-color 0.2s ease-in-out 0s;
+  transition: background-color 0.2s ease-in-out 0s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.lt-ie9 .sub-navigation__item a:hover, .lt-ie9 .sub-navigation__item a:focus, .lt-ie9 .sub-navigation__item a:active {
+  border-bottom: 2px solid white;
+  padding-bottom: 5.5px;
+}
+.sub-navigation__item.current a {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.lt-ie9 .sub-navigation__item.current a {
+  border-bottom: 2px solid white;
+  padding-bottom: 5.5px;
+}
+.lt-ie9 .sub-navigation__item {
+  font-size: 90%;
+}
+.lt-ie9 .sub-navigation__item a {
+  padding: 7.5px;
+}
+@media screen and (min-width: 800px) and (max-width: 1080px) {
+  .sub-navigation__item {
+    font-size: 90%;
+  }
+  .sub-navigation__item a {
+    padding: 7.5px;
+  }
+}
+@media screen and (max-width: 799px) {
+  .sub-navigation__item {
+    font-size: 1.5625em;
+    line-height: 1.28em;
+    line-height: 1;
+    display: block;
+  }
+  .sub-navigation__item a {
+    border-left: 3px solid transparent;
+    color: #1c1c1b;
+    text-decoration: none;
+    display: block;
+    padding: 15px 15px 12.5px 15px;
+  }
+  .sub-navigation__item.current a {
+    background-color: #f2e6cd;
+    border-left-color: #009ec7;
+  }
+  .sub-navigation--m-shed .sub-navigation__item.current a {
+    border-left-color: #ec6a05;
+  }
+  .sub-navigation--bristol-museum-and-art-gallery .sub-navigation__item.current a {
+    border-left-color: #d7005a;
+  }
+  .sub-navigation--georgian-house-museum .sub-navigation__item.current a {
+    border-left-color: #006771;
+  }
+  .sub-navigation--red-lodge-museum .sub-navigation__item.current a {
+    border-left-color: #c10a26;
+  }
+  .sub-navigation--blaise-castle-house-museum .sub-navigation__item.current a {
+    border-left-color: #005239;
+  }
+  .sub-navigation--bristol-record-office .sub-navigation__item.current a {
+    border-left-color: #80378c;
+  }
+}
+
+.navigation-small-screen-menu-trigger {
+  padding: 22.5px 15px;
+  display: inline-block;
+  text-decoration: none;
+  color: #05ccff;
+  font-size: 0.875em;
+  line-height: 1.7142857em;
+  position: relative;
+  background-color: #40494e;
+}
+.navigation-small-screen-menu-trigger:hover, .navigation-small-screen-menu-trigger:focus, .navigation-small-screen-menu-trigger:active {
+  color: #fff;
+  background-color: #05ccff;
+}
+.navigation-small-screen-menu-trigger .navigation-small-screen-menu-trigger__menu {
+  display: block;
+  padding-top: 15px;
+}
+.navigation-small-screen-menu-trigger .navigation-small-screen-menu-trigger__bars {
+  display: block;
+  height: 10px;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+}
+.navigation-small-screen-menu-trigger .navigation-small-screen-menu-trigger__bars:before, .navigation-small-screen-menu-trigger .navigation-small-screen-menu-trigger__bars:after {
+  border-top: 2px solid #fff;
+  display: block;
+  height: 8px;
+  width: 100%;
+  content: ".";
+  text-indent: -999px;
+  background: transparent;
+}
+.navigation-small-screen-menu-trigger .navigation-small-screen-menu-trigger__bars:after {
+  margin-top: 8px;
+}
+.lt-ie9 .navigation-small-screen-menu-trigger {
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  .navigation-small-screen-menu-trigger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .off-screen-navigation {
+    position: absolute;
+    top: 128px;
+    left: -100%;
+    width: 100%;
+    z-index: 200;
+    overflow: hidden;
+    min-height: 3em;
+    background: white;
+    padding-bottom: 6em;
+    -webkit-box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .off-screen-navigation .row {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .csstransforms3d.csstransitions.js-ready .off-screen-navigation {
+    display: block;
+    left: 0;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    -webkit-transition-delay: 0s;
+    -moz-transition: -moz-transform 0.3s ease-in-out 0s;
+    -o-transition: -o-transform 0.3s ease-in-out 0s;
+    transition: transform 0.3s ease-in-out 0s;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -o-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .csstransforms3d.csstransitions.js-nav .off-screen-navigation {
+    display: block;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.csstransforms3d.csstransitions.js-nav #content,
+.csstransforms3d.csstransitions.js-nav footer[role="contentinfo"] {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s ease-in-out;
+  -webkit-transition-delay: 0s;
+  -moz-transition: opacity 0.15s ease-in-out 0s;
+  -o-transition: opacity 0.15s ease-in-out 0s;
+  transition: opacity 0.15s ease-in-out 0s;
+}
+
+.venue-menu-dropdown {
+  display: none;
+}
+.lt-ie9 .venue-menu-dropdown {
+  display: block;
+  position: absolute;
+  left: -99999px;
+  z-index: 2;
+  background: #fff;
+  width: 100%;
+  padding: 30px;
+  -webkit-box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.2), -1px 2px 3px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.2), -1px 2px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.2), -1px 2px 3px 0 rgba(0, 0, 0, 0.2);
+}
+.navigation__menu--hoverintent .navigation__item:hover .lt-ie9 .venue-menu-dropdown, .no-js .navigation__item:hover .lt-ie9 .venue-menu-dropdown {
+  left: 0;
+}
+.navigation__menu--hoverintent .navigation__item.current .lt-ie9 .venue-menu-dropdown, .no-js .navigation__item.current .lt-ie9 .venue-menu-dropdown {
+  left: -99999px;
+}
+@media screen and (min-width: 800px) {
+  .venue-menu-dropdown {
+    display: block;
+    position: absolute;
+    left: -99999px;
+    z-index: 2;
+    background: #fff;
+    width: 100%;
+    padding: 30px;
+    -webkit-box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.2), -1px 2px 3px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.2), -1px 2px 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.2), -1px 2px 3px 0 rgba(0, 0, 0, 0.2);
+  }
+  .navigation__menu--hoverintent .navigation__item:hover .venue-menu-dropdown, .no-js .navigation__item:hover .venue-menu-dropdown {
+    left: 0;
+  }
+  .navigation__menu--hoverintent .navigation__item.current .venue-menu-dropdown, .no-js .navigation__item.current .venue-menu-dropdown {
+    left: -99999px;
+  }
+}
+
+.venue-menu-dropdown .cutin__caption__meta {
+  margin-bottom: 0;
+}
+
+.venue-menu-dropdown__intro {
+  position: relative;
+  float: left;
+  width: 41%;
+  margin-right: 1.8%;
+}
+
+.venue-menu-dropdown__list {
+  float: left;
+  width: 25%;
+}
+.venue-menu-dropdown__list h2 {
+  margin-bottom: 0.5em;
+  line-height: 1.125;
+}
+
+.venue-menu-dropdown__list--whats-at,
+.venue-menu-dropdown__list--whats-on {
+  width: 30%;
+  margin-right: 1.8%;
+  padding-right: 1.8%;
+}
+
+.venue-menu-dropdown__heading--whats-at,
+.venue-menu-dropdown__heading--whats-on {
+  width: 100%;
+  background: #f4f4f4;
+  border: 1px solid #f2e6cd;
+  padding: 0 9px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  color: #1c1c1b;
+  line-height: 1.125;
+}
+
+.venue-menu-dropdown__heading-link {
+  color: #1c1c1b;
+  text-decoration: none;
+}
+
+.venue-menu-dropdown__list-item {
+  padding: 0 12px;
+  padding-top: 0.5em;
+}
+
+.venue-menu-dropdown__list-item--whats-on {
+  padding-bottom: 0.5em;
+}
+
+.venue-menu-dropdown__list-meta {
+  font-size: 0.875em;
+  line-height: 1.7142857em;
+  line-height: normal;
+}
+
+.opening-times {
+  overflow: hidden;
+}
+
+.opening-times__descriptive-list {
+  display: block;
+  overflow: hidden;
+}
+.opening-times__descriptive-list + .opening-times__descriptive-list {
+  margin-top: 0.5em;
+  padding-top: 1em;
+  border-top: 1px #e5e5e4 solid;
+}
+.opening-times__descriptive-list dd:first-of-type,
+.opening-times__descriptive-list dt:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.lt-ie9 .colspan12-12 .opening-times__descriptive-list-item {
+  border-top: 1px solid #ddd;
+  padding-top: 8px;
+}
+@media screen and (min-width: 960px) {
+  .colspan12-12 .opening-times__descriptive-list-item {
+    border-top: 1px solid #ddd;
+    padding-top: 8px;
+  }
+}
+.lt-ie9 .colspan12-12 .opening-times__descriptive-list-item {
+  font-size: 1.2em;
+  padding-top: 12px;
+}
+@media screen and (min-width: 1160px) {
+  .colspan12-12 .opening-times__descriptive-list-item {
+    font-size: 1.2em;
+    padding-top: 12px;
+  }
+}
+
+.opening-times__descriptive-list-item {
+  display: inline-block;
+  float: left;
+  margin-bottom: 0.5em;
+}
+.lt-ie9 .opening-times__descriptive-list-item {
+  display: block;
+  float: none;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 600px) and (max-width: 960px) {
+  .opening-times__descriptive-list-item {
+    display: block;
+    float: none;
+    margin-bottom: 0;
+  }
+}
+
+.opening-times__descriptive-list-item--date {
+  color: #1c1c1b;
+  clear: left;
+  width: 40%;
+}
+.lt-ie9 .opening-times__descriptive-list-item--date {
+  width: 100%;
+}
+@media screen and (min-width: 600px) and (max-width: 960px) {
+  .opening-times__descriptive-list-item--date {
+    width: 100%;
+  }
+}
+
+.opening-times__descriptive-list-item--time {
+  text-align: right;
+  width: 60%;
+}
+.lt-ie9 .opening-times__descriptive-list-item--time {
+  width: 100%;
+  text-align: left;
+}
+.lt-ie9 .opening-times__descriptive-list-item--time:after {
+  margin-bottom: 6px;
+  content: ".";
+  text-indent: -999px;
+  display: block;
+  height: 0;
+}
+@media screen and (min-width: 600px) and (max-width: 960px) {
+  .opening-times__descriptive-list-item--time {
+    width: 100%;
+    text-align: left;
+  }
+  .opening-times__descriptive-list-item--time:after {
+    margin-bottom: 6px;
+    content: ".";
+    text-indent: -999px;
+    display: block;
+    height: 0;
+  }
+}
+
+.opening-times__footer {
+  margin-top: 1em;
+}
+
+.opening-times__alert {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 0.875em;
+  line-height: 1.7142857em;
+  line-height: 1.4285714em;
+  background: #ef2602;
+  padding: 3.75px 7.5px;
+  color: #fff;
+}
+.opening-times__alert a {
+  color: #fff;
+}
+.opening-times__alert a:hover, .opening-times__alert a:focus, .opening-times__alert a:active {
+  text-decoration: none;
+}
+.opening-times__alert + .opening-times__alert {
+  background: #d62202;
+}
+
+.divide {
+  border: 0;
+  background: #e5e5e4;
+  height: 1px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.wp-pagenavi {
+  border-bottom: 3px solid #f2e6cd;
+}
+.wp-pagenavi a {
+  text-decoration: none;
+}
+.wp-pagenavi .pages,
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink,
+.wp-pagenavi .page,
+.wp-pagenavi .current {
+  display: block;
+  float: left;
+  height: 38px;
+  line-height: 38px;
+}
+.wp-pagenavi .pages {
+  padding: 2px 15px 0;
+}
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink,
+.wp-pagenavi .page,
+.wp-pagenavi .current {
+  color: #b2b2b1;
+  padding: 2px 8px 0;
+  vertical-align: top;
+}
+.wp-pagenavi .previouspostslink:hover, .wp-pagenavi .previouspostslink:focus,
+.wp-pagenavi .nextpostslink:hover,
+.wp-pagenavi .nextpostslink:focus,
+.wp-pagenavi .page:hover,
+.wp-pagenavi .page:focus {
+  background-color: #f7f0e1;
+}
+.wp-pagenavi .current {
+  background-color: #f2e6cd;
+  color: #4b565c;
+}
+
+.section {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.section:last-of-type {
+  border-bottom: 0;
+}
+
+.section--divide {
+  border-bottom: #e5e5e4 solid 1px;
+}
+
+.section-header {
+  margin-bottom: 1em;
+  position: relative;
+}
+.lt-ie9 .section-header {
+  margin-bottom: 2em;
+}
+@media screen and (max-width: 599px) {
+  .section-header {
+    margin-bottom: 2em;
+  }
+}
+
+.section__heading {
+  font-size: 1.875em;
+  line-height: 1.3333333em;
+  line-height: 1.0666667em;
+  max-width: 75%;
+}
+
+.section__header__meta {
+  display: inline-block;
+}
+.lt-ie9 .section__header__meta {
+  position: absolute;
+  right: 0;
+  top: 7.5px;
+}
+@media screen and (min-width: 600px) {
+  .section__header__meta {
+    position: absolute;
+    right: 0;
+    top: 7.5px;
+  }
+}
+.lt-ie9 .section__header__meta {
+  display: inline-block;
+  text-align: center;
+  padding: 0.5em 1em 0.15em 1em;
+  color: white;
+  background-color: #009ec7;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0.35em solid #008aae;
+  font-family: 'DIN Next W01 Medium', sans-serif;
+  text-decoration: none;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 1.25em;
+  line-height: 1.2em;
+  padding-bottom: 6px;
+  margin-top: 0.5em;
+}
+.lt-ie9 .section__header__meta:hover, .lt-ie9 .section__header__meta:focus, .lt-ie9 .section__header__meta:active {
+  color: white;
+  background-color: #cd0438;
+  border-bottom-color: #b40431;
+}
+.lt-ie9 .section__header__meta:active {
+  border-bottom-color: transparent;
+  top: 3px;
+}
+@media screen and (max-width: 599px) {
+  .section__header__meta {
+    display: inline-block;
+    text-align: center;
+    padding: 0.5em 1em 0.15em 1em;
+    color: white;
+    background-color: #009ec7;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0.35em solid #008aae;
+    font-family: 'DIN Next W01 Medium', sans-serif;
+    text-decoration: none;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 1.25em;
+    line-height: 1.2em;
+    padding-bottom: 6px;
+    margin-top: 0.5em;
+  }
+  .section__header__meta:hover, .section__header__meta:focus, .section__header__meta:active {
+    color: white;
+    background-color: #cd0438;
+    border-bottom-color: #b40431;
+  }
+  .section__header__meta:active {
+    border-bottom-color: transparent;
+    top: 3px;
+  }
+}
+
+.sitemap li ul {
+  margin-top: 10px;
+}
+.sitemap li ul li {
+  margin-left: 30px;
+}
+
+.debug {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 12px;
+}
+
+svg use {
+  pointer-events: none;
+}
+
+.small-screen-museum-navigation {
+  overflow: hidden;
+  position: relative;
+}
+.lt-ie9 .small-screen-museum-navigation {
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  .small-screen-museum-navigation {
+    display: none;
+  }
+}
+
+.small-screen-museum-navigation__option {
+  width: 50%;
+  float: left;
+  display: inline-block;
+  background-color: #4b565c;
+  text-indent: -999em;
+  background: #4b565c;
+}
+.small-screen-museum-navigation__option a {
+  background: url(../svg/logo/service.svg) #4b565c no-repeat center center;
+  display: block;
+  min-height: 120px;
+  width: 100%;
+  background-size: 80% 80%;
+}
+
+.small-screen-museum-navigation__option--m-shed a {
+  background: url(../svg/logo/m-shed.svg) #ec6a05 no-repeat center center;
+  background-size: 80% 80%;
+}
+
+.small-screen-museum-navigation__option--bristol-museum-and-art-gallery a {
+  background: url(../svg/logo-bmag.svg) #d7005a no-repeat center center;
+  background-size: 80% 80%;
+}
+
+.small-screen-museum-navigation__option--bristol-record-office a {
+  background: url(../svg/logo-bro.svg) #80378c no-repeat center center;
+  background-size: 85% 85%;
+}
+
+.small-screen-museum-navigation__option--red-lodge-museum a {
+  background: url(../svg/logo-rlm.svg) #c10a26 no-repeat center center;
+  background-size: 80% 80%;
+}
+
+.small-screen-museum-navigation__option--georgian-house-museum a {
+  background: url(../svg/logo-ghm.svg) #006771 no-repeat center center;
+  background-size: 80% 80%;
+}
+
+.small-screen-museum-navigation__option--blaise-castle-house-museum a {
+  background: url(../svg/logo-bchm.svg) #005239 no-repeat center center;
+  background-size: 65% 65%;
+}
+
+.state-banner {
+  font-weight: bold;
+  color: #1c1c1b;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.state-banner.state-banner--alpha {
+  background: #ddd;
+}
+.state-banner.state-banner--beta {
+  background: #efd886;
+}
+
+.strapline {
+  color: #4b565c;
+  font-size: 0.875em;
+  line-height: 1.7142857em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.strapline span {
+  color: #009ec7;
+}
+.lt-ie9 .strapline {
+  background: transparent;
+  font-size: 1.0625em;
+  line-height: 1.4117647em;
+  color: #fff;
+  text-align: right;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  bottom: auto;
+  left: auto;
+  width: auto;
+}
+.lt-ie9 .strapline span {
+  color: #05ccff;
+}
+@media screen and (min-width: 800px) {
+  .strapline {
+    background: transparent;
+    font-size: 1.0625em;
+    line-height: 1.4117647em;
+    color: #fff;
+    text-align: right;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    bottom: auto;
+    left: auto;
+    width: auto;
+  }
+  .strapline span {
+    color: #05ccff;
+  }
+}
+.lt-ie9 .strapline {
+  font-size: 1.5625em;
+  line-height: 1.28em;
+  top: 15px;
+}
+@media screen and (min-width: 800px) {
+  .strapline {
+    font-size: 1.5625em;
+    line-height: 1.28em;
+    top: 15px;
+  }
+}
+.lt-ie9 .strapline {
+  font-size: 1.875em;
+  line-height: 1.3333333em;
+  top: 10px;
+}
+@media screen and (min-width: 960px) {
+  .strapline {
+    font-size: 1.875em;
+    line-height: 1.3333333em;
+    top: 10px;
+  }
+}
+.lt-ie9 .strapline {
+  right: 0;
+}
+@media screen and (min-width: 1190px) {
+  .strapline {
+    right: 0;
+  }
+}
+
+.strapline-small-screen {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #4b565c;
+  background-color: #009ec7;
+  color: white;
+  font-size: 0.875em;
+  line-height: 1.7142857em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  text-align: center;
+}
+.lt-ie9 .strapline-small-screen {
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  .strapline-small-screen {
+    display: none;
+  }
+}
+.strapline-small-screen.strapline-small-screen--m-shed {
+  background-color: #ec6a05;
+  color: white;
+}
+.strapline-small-screen.strapline-small-screen--bristol-museum-and-art-gallery {
+  background-color: #d7005a;
+  color: white;
+}
+.strapline-small-screen.strapline-small-screen--georgian-house-museum {
+  background-color: #006771;
+  color: white;
+}
+.strapline-small-screen.strapline-small-screen--red-lodge-museum {
+  background-color: #c10a26;
+  color: white;
+}
+.strapline-small-screen.strapline-small-screen--blaise-castle-house-museum {
+  background-color: #005239;
+  color: white;
+}
+.strapline-small-screen.strapline-small-screen--bristol-record-office {
+  background-color: #80378c;
+  color: white;
+}
+
+.swatch--global-black {
+  background: #1c1c1b;
+}
+
+.swatch--global-red {
+  background: #cd0438;
+}
+
+.swatch--global-cyan {
+  background: #009ec7;
+}
+
+.swatch--global-lime {
+  background: #cad400;
+}
+
+.swatch--global-grey-cool {
+  background: #4b565c;
+}
+
+.swatch--global-grey-silver {
+  background: #b2b2b1;
+}
+
+.swatch--global-mint {
+  background: #83c7bb;
+}
+
+.swatch--global-pine {
+  background: #005239;
+}
+
+.swatch--global-tan {
+  background: #8a1601;
+}
+
+.swatch--mshed-orange {
+  background: #ec6a05;
+}
+
+.swatch--mshed-yellow {
+  background: #fdc500;
+}
+
+.swatch--bmag-navy {
+  background: #005086;
+}
+
+.swatch--bmag-magenta {
+  background: #d7005a;
+}
+
+.swatch--rlm-red {
+  background: #c10a26;
+}
+
+.swatch--ghm-teal {
+  background: #006771;
+}
+
+table {
+  width: 100%;
+  background: white;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+th,
+td {
+  padding: 3.75px;
+  text-align: left;
+}
+@media screen and (min-width: 600px) {
+  th,
+  td {
+    padding: 10px 15px;
+  }
+}
+
+.table--bordered th,
+.table--bordered td {
+  border: 1px solid #b2b2b1;
+  border-left: 0;
+  border-right: 0;
+  vertical-align: top;
+}
+.table--bordered th:empty,
+.table--bordered td:empty {
+  border: none;
+}
+.table--bordered thead tr th {
+  background: #4b565c;
+  color: #fff;
+}
+
+.table--striped tbody tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+.responsive-tabs {
+  margin: 0.4em 0 0.8em 0;
+}
+.responsive-tabs .resp-accordian__heading {
+  cursor: pointer;
+  display: none;
+}
+.responsive-tabs .resp-tab-content {
+  display: none;
+}
+.responsive-tabs .resp-content-active, .responsive-tabs .resp-tab-content-active, .responsive-tabs .resp-accordion-active {
+  display: block;
+}
+@media screen and (max-width: 799px) {
+  .responsive-tabs .resp-tabs-list {
+    display: none;
+  }
+  .responsive-tabs .resp-accordian__heading {
+    display: block;
+  }
+  .responsive-tabs .resp-accordion-closed {
+    display: none !important;
+  }
+}
+.responsive-tabs .tab__list {
+  overflow: hidden;
+  *zoom: 1;
+}
+.responsive-tabs .tab__item a {
+  display: block;
+  padding: 15px;
+  color: #4b565c;
+  text-decoration: none;
+}
+.lt-ie9 .responsive-tabs .tab__item {
+  float: left;
+  display: inline-block;
+}
+.lt-ie9 .responsive-tabs .tab__item a {
+  display: inline-block;
+}
+@media screen and (min-width: 800px) {
+  .responsive-tabs .tab__item {
+    float: left;
+    display: inline-block;
+  }
+  .responsive-tabs .tab__item a {
+    display: inline-block;
+  }
+}
+.responsive-tabs .tab__icon a:before {
+  content: ".";
+  text-indent: -9999em;
+  background-size: contain;
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  float: left;
+  margin-right: 7.5px;
+  padding-top: 1.25em;
+}
+.responsive-tabs .resp-tab-content {
+  padding: 15px;
+  overflow: hidden;
+  *zoom: 1;
+}
+.responsive-tabs .resp-tab-content .as-wysiwyg p:first-of-type {
+  color: #4b565c;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.responsive-tabs .tab__icon--foot a:before {
+  background: url(../svg/icon-map-pin.svg) no-repeat center center;
+}
+.responsive-tabs .tab__icon--car a:before {
+  background: url(../svg/icon-car.svg) no-repeat center center;
+}
+.responsive-tabs .tab__icon--train a:before {
+  background: url(../svg/icon-train.svg) no-repeat center center;
+}
+.responsive-tabs .tab__icon--bus a:before {
+  background: url(../svg/icon-bus.svg) no-repeat center center;
+}
+.responsive-tabs .tab__icon--boat a:before {
+  background: url(../svg/icon-boat.svg) no-repeat center center;
+}
+.lt-ie9 .responsive-tabs .tab__aside {
+  float: right;
+  width: 35%;
+}
+@media screen and (min-width: 800px) {
+  .responsive-tabs .tab__aside {
+    float: right;
+    width: 35%;
+  }
+}
+.responsive-tabs .tab__map {
+  margin-bottom: 1em;
+}
+.lt-ie9 .responsive-tabs .tab__map {
+  float: left;
+  margin-right: 15px;
+  width: 60%;
+  height: 80%;
+  min-height: 400px;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 800px) {
+  .responsive-tabs .tab__map {
+    float: left;
+    margin-right: 15px;
+    width: 60%;
+    height: 80%;
+    min-height: 400px;
+    margin-bottom: 0;
+  }
+}
+.responsive-tabs .resp-accordian__heading {
+  position: relative;
+}
+.responsive-tabs .resp-accordian__heading a {
+  display: block;
+  padding: 15px;
+  color: #4b565c;
+  text-decoration: none;
+}
+.responsive-tabs .resp-arrow {
+  position: absolute;
+  top: 40%;
+  right: 3%;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 12px solid #b2b2b1;
+}
+.responsive-tabs .resp-tab-active {
+  background: #e7e7e7;
+}
+.responsive-tabs .resp-tab-active .resp-arrow {
+  border: none;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid #4b565c;
+}
+
+.venue-image {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  border-top: solid 3px #b2b2b1;
+}
+.venue-image img {
+  display: block;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -webkit-transition-delay: 0s;
+  -moz-transition: opacity 0.2s ease-in-out 0s;
+  -o-transition: opacity 0.2s ease-in-out 0s;
+  transition: opacity 0.2s ease-in-out 0s;
+  z-index: 1;
+  position: relative;
+}
+.venue-image .venue-image__hint {
+  bottom: -40px;
+  right: 0;
+  display: inline-block;
+  background-color: #fff;
+  padding: 3px 8px;
+  text-align: left;
+  -webkit-transition: bottom 0.2s ease-in-out;
+  -webkit-transition-delay: 0s;
+  -moz-transition: bottom 0.2s ease-in-out 0s;
+  -o-transition: bottom 0.2s ease-in-out 0s;
+  transition: bottom 0.2s ease-in-out 0s;
+  color: #4b565c;
+  text-decoration: none;
+  position: absolute;
+  z-index: 2;
+  font-size: 0.8125em;
+  line-height: 1.8461538em;
+}
+.venue-image a:hover img, .venue-image a:focus img, .venue-image a:active img {
+  opacity: 0.5;
+}
+.venue-image a:hover .venue-image__hint, .venue-image a:focus .venue-image__hint, .venue-image a:active .venue-image__hint {
+  display: block;
+  bottom: 0;
+  right: 0;
+}
+
+.venue-image--m-shed {
+  background-color: #ec6a05;
+  border-top-color: #ec6a05;
+}
+
+.venue-image--bristol-museum-and-art-gallery {
+  background-color: #d7005a;
+  border-top-color: #d7005a;
+}
+
+.venue-image--bristol-record-office {
+  background-color: #80378c;
+  border-top-color: #80378c;
+}
+
+.venue-image--georgian-house-museum {
+  background-color: #006771;
+  border-top-color: #006771;
+}
+
+.venue-image--red-lodge-museum {
+  background-color: #c10a26;
+  border-top-color: #c10a26;
+}
+
+.venue-image--blaise-castle-house-museum {
+  background-color: #005239;
+  border-top-color: #005239;
+}
+
+.venue-image--ident {
+  position: relative;
+  background-color: #b2b2b1;
+  overflow: hidden;
+  background-position-x: 40px;
+  background-repeat: no-repeat;
+}
+.venue-image--ident img {
+  position: relative;
+  left: 40px;
+}
+
+.venue-image--ident--m-shed {
+  background-color: #ec6a05;
+}
+
+.venue-image--ident--bristol-museum-and-art-gallery {
+  background-color: #d7005a;
+}
+
+.venue-image--ident--bristol-record-office {
+  background-color: #80378c;
+}
+
+.venue-image--ident--georgian-house-museum {
+  background-color: #006771;
+}
+
+.venue-image--ident--red-lodge-museum {
+  background-color: #c10a26;
+}
+
+.venue-image--ident--blaise-castle-house-museum {
+  background-color: #005239;
+}
+
+.venue-image--ident__icon {
+  width: 30px;
+  height: 30px;
+  background: url(../svg/icon-id-bmga.svg) transparent no-repeat center top;
+  text-indent: -999em;
+  display: block;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: 5;
+}
+
+.venue-image--ident__icon--m-shed {
+  background: url(../svg/icon-id-mshed.svg) transparent no-repeat center top;
+}
+
+.venue-image--ident__icon--bristol-museum-and-art-gallery {
+  background: url('') transparent no-repeat center top;
+}
+
+.venue-image--ident__icon--bristol-record-office {
+  background: url(../svg/icon-id-bro.svg) transparent no-repeat center top;
+  top: 8px;
+}
+
+.venue-image--ident__icon--red-lodge-museum {
+  background: url(../svg/icon-id-rlm.svg) transparent no-repeat center top;
+  top: 10px;
+}
+
+.venue-image--ident__icon--georgian-house-museum {
+  background: url(../svg/icon-id-ghm.svg) transparent no-repeat center top;
+  top: 8px;
+}
+
+.venue-image--ident__icon--blaise-castle-house-museum {
+  background: url(../svg/icon-id-bchm.svg) transparent no-repeat center top;
+}
+
+.as-wysiwyg img {
+  margin-bottom: 1.5em;
+  display: block;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.as-wysiwyg .alignnone {
+  clear: both;
+}
+.as-wysiwyg .wp-caption {
+  padding: 15px;
+  border: 1px solid #e5e5e4;
+  background: #fff;
+  margin-bottom: 1.5em;
+  clear: both;
+}
+.as-wysiwyg .wp-caption p.wp-caption-text {
+  margin-bottom: 0;
+  padding-top: 0.5em;
+}
+.as-wysiwyg .wp-caption img {
+  vertical-align: top;
+  margin-bottom: 0;
+}
+.as-wysiwyg .wp-smiley {
+  display: none !important;
+}
+.lt-ie9 .as-wysiwyg .alignleft, .lt-ie9 .as-wysiwyg blockquote.left {
+  float: left;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 2em;
+  margin-bottom: 1em;
+}
+.lt-ie9 .as-wysiwyg .alignright, .lt-ie9 .as-wysiwyg blockquote.right {
+  float: right;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+.lt-ie9 .as-wysiwyg .aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: inline-block;
+  vertical-align: top;
+  clear: both;
+}
+@media screen and (min-width: 600px) {
+  .as-wysiwyg .alignleft, .as-wysiwyg blockquote.left {
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 2em;
+    margin-bottom: 1em;
+  }
+  .as-wysiwyg .alignright, .as-wysiwyg blockquote.right {
+    float: right;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 2em;
+    margin-bottom: 1em;
+  }
+  .as-wysiwyg .aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: inline-block;
+    vertical-align: top;
+    clear: both;
+  }
+}
+
+/* Pullquotes
+-------------------------------------------------------------- */
+blockquote.left {
+  float: left;
+  margin-left: 0;
+  margin-right: 20px;
+  text-align: right;
+  width: 33%;
+}
+
+blockquote.right {
+  float: right;
+  margin-left: 20px;
+  margin-right: 0;
+  text-align: left;
+  width: 33%;
+}
+
+/* ::Print */
+/* ------------------------------------------------------------ */
+@media print {
+  body {
+    line-height: 1em;
+    font-size: 62.5%;
+  }
+}
+
+</style>
