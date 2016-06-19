@@ -13,3 +13,10 @@ This application is running across multiple Bristol Museum Venues, on various sc
  - Optimised for 1080 x 1920 landscape and portrait screens
  - Can have screen-specific settings to manage different venues / branding
  - Timings for each mode can be configured
+ 
+
+SETUP
+
+ - to see basic use, download the zip and open startme.bat (in windows)
+ 
+
