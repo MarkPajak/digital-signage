@@ -1,0 +1,92 @@
+<style>
+/* http://www.colorzilla.com/gradient-editor/ */
+body{
+background-color: #ffffff;/* IE6-9 */;
+background:white;
+}
+
+#eventsList h1{
+top: -281px;
+position: relative;
+font-size:30;
+}
+
+
+#eventsList{
+position:absolute;
+padding-left:0;
+padding-bottom:30%;
+text-align:center;
+padding: 40px;
+}
+#sponsorCylcer{
+	text-align:center;
+	bottom: 280px;
+	position: relative;
+	
+width:1000px;
+		}
+#sponsorCylcer img{
+
+max-width:270px;
+max-height:100px;
+height:auto;
+
+	position:relative;
+		top:40px;
+
+}	
+		
+#sponsorCylcer div{
+	height:100px;
+	padding-bottom:150px;
+		}
+		
+#sponsorCylcer text{
+		position: absolute;
+		bottom: 110px !important;
+		width: 520px !important;
+		right: 20px;	
+		font-size: 20px;
+		line-height: 2;
+}
+
+
+
+
+#sponsorCylcer div.hidden{	
+	opacity:0;
+}
+
+.appear
+      opacity: 1;
+	     transition: opacity 1s 
+   -moz-transition: opacity 1s
+   -webkit-transition: opacity 1s
+      }
+
+
+</style>
+<h1> Bristol Museums would like to thank our current corporate supporters:</h1>
+<div  id="sponsorCylcer"> 
+ <%  var counter = 0
+
+	
+
+		 _.each(sponsors, function(sponsor){ 
+	if(counter>=offset &&  sponsor.get('logoIRN')>0){
+		 %>
+		<!--<div  class="<% if (counter==0){ print("active")} %>">  <%=  sponsor.get('name') %>-->
+		<div  id="sponsor_<%  print(counter) %>"  class="">
+		<img  src="sponsor-logos/<%=  sponsor.get('logoIRN') %>.jpg" />
+		</div>
+	
+
+<% } counter++} ); %>
+</div>
+
+<script>
+
+$('#sponsorCylcer img').height()
+$(window).height()
+</script>

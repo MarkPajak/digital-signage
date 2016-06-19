@@ -1,0 +1,39 @@
+<style>
+#sponsorCylcer{
+		vertical-align:bottom;
+		bottom:-530px;
+		position:relative;
+		width: 100%;
+		}
+		
+		
+#sponsorCylcer div{
+		position:relative;
+		bottom:520px;
+		width:100%;
+		display:none
+		}
+		
+#sponsorCylcer text{
+		position: absolute;
+		bottom: 110px !important;
+		display: none;
+		width: 520px !important;
+		right: 20px;	
+		font-size: 20px;
+		line-height: 2;
+}
+</style>
+
+<div  id="sponsorCylcer"> 
+ <%  var counter = 0
+		 _.each(sponsors, function(sponsor){  %>
+
+		<div  class="<% if (counter==0){ print("active")} %>">   <h4><%=  sponsor.get('heading') %> </h4><%=  sponsor.get('message') %>
+		<!--<img  src="images/<%=  sponsor.get('logoIRN') %>.jpg" />-->
+		</div>
+
+<% 
+
+ counter++} ); %>
+</div>

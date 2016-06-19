@@ -1,0 +1,156 @@
+<style>
+
+/* getting rid of this empty style block causes the template to render incorrectly ??! */
+.workshopCylcer{
+		vertical-align:bottom;
+		bottom:-530px;
+		position:relative;
+		width: 100%;
+		}
+		
+.workshopNameExtra{
+		top: 140px !important;
+		width:400px;
+}	
+.workshopCylcer div{
+		
+		bottom:520px;
+		width: 400px;
+		display:none
+		}
+		
+
+
+.workshopCylcer{
+		top: 140px !important;
+		position:absolute;
+		height: 58px;
+}
+.workshopName{
+		top: 50px;
+		height: 95px;
+		overflow: hidden;
+}
+.workshopcategory,.workshopName,.workshoproom {
+		width: 440px !important;
+		font-size: 20;
+		display: block; /* may help stop any text wrapping and display it inline. */
+
+
+
+}
+.workshoproom{
+font-size: 40px;
+}
+.workshopTime {
+
+		left: 460px;
+		position: absolute;
+		width: 200px;
+	
+}
+/*
+
+
+.price{
+		top: 70px;
+}
+
+
+*/
+</style>
+<div class="workshopDiv">
+	
+		<div class="workshopcategory">
+		<h4><%= workshops[0].get('category') %>  </h4>
+				
+		</div>
+		<div class="workshoproom">
+		<h4><%= workshops[0].get('room') %>  </h4><%= workshops[0].get('roomLocation') %>
+		<%= workshops[0].get('priceDetails') %> 
+		 </div>
+		<td>
+		<div class="workshoparrow">		
+		
+		<%
+		var randDirection = 'off';	
+		if(arrows){
+ $.each(arrows, function() {
+	console.log('thisarrow',this)
+if(	this['event_space']== workshops[0].get('room')){
+
+if(	this['direction']==1){ 
+					randDirection='left'
+			}  else if(	this['direction']==2){ 
+				randDirection='right'
+				}else  if(		this['direction']==3){ 
+				randDirection='up'
+			}  else if(		this['direction']==4){ 
+				randDirection='down'
+				} 	
+			}
+			
+	})
+	}
+	%>
+		
+		<img  class="arrow <% print(randDirection) %>" src="images/arrows.png">
+		</div>
+		</td>
+		
+		<div class="workshopName">
+		<% 
+		var Direction = ['left', 'right', 'up','']; 
+		//var randDirection = Direction[Math.floor(Math.random() * Direction.length)];
+		
+		var counter=0
+
+		_.each(workshops, function(workshop){
+		var self = this
+		
+if(counter<1 ){
+
+	
+	
+	%>	
+		<%= workshop.get('name') %> 				
+		</div>
+		<div class="workshopTime">
+		<% print( workshop.get('startTime')) 
+		if(workshop.get('startTimeMinutes')>0 ){
+		print("." + workshop.get('startTimeMinutes')) } else{  }  %><%= workshop.get('startTimeAMPM') %><% 
+			if (workshop.get('endTime')==""||isNaN( workshop.get('endTime'))){} else{print( ' - ')}
+		
+		%><% print( workshop.get('endTime')) 
+		if(workshop.get('endTimeMinutes')>0 ){
+		print("." +workshop.get('endTimeMinutes')) } else{  }  %><%= workshop.get('endTimeAMPM') %>
+		</div>
+		
+		<br>
+		
+
+	<% 		} else{	 %>
+	<% 		if(counter==1 ){	 %>	
+		<div class="workshopCylcer" id="workshopCylcer_<%  print(element) %>"> 
+			<% 		}	 %>	
+		<div  class="workshopNameExtra <% if (counter==1){ print("active")} %>">		<%=  workshop.get('name') %>
+			<text class="laterWorkshopTimes">				
+			<% print( workshop.get('startTime')) 
+		if(workshop.get('startTimeMinutes')>0 ){
+		print("." +workshop.get('startTimeMinutes')) } else{  }  %><%= workshop.get('startTimeAMPM') %><% 
+			if (isNaN( workshop.get('endTime'))){} else{print( ' - ')}
+		
+		%><% print( workshop.get('endTime')) 
+		if(workshop.get('endTimeMinutes')>0 ){
+		print("." +workshop.get('endTimeMinutes')) } else{  }  %><%= workshop.get('endTimeAMPM') %>
+			</text>
+		</div>
+	
+		
+	<% 		if(counter==workshops.length-1 ){	 %>		
+		</div>
+		<% }}counter++
+
+}); %>
+
+</div></div>

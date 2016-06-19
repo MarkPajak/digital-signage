@@ -1,0 +1,1327 @@
+<style>
+/* @import must be at top of file, otherwise CSS will not work */
+
+
+@font-face {font-family: 'AmericanTypewriterStd-Med';src: url('css/webfonts/2E10A6_0_0.eot');src: url('css/webfonts/2E10A6_0_0.eot?#iefix') format('embedded-opentype'),url('css/webfonts/2E10A6_0_0.woff2') format('woff2'),url('css/webfonts/2E10A6_0_0.woff') format('woff'),url('css/webfonts/2E10A6_0_0.ttf') format('truetype');}
+ li {
+    line-height: 36px !important;
+}
+  
+@font-face {font-family: 'AvantGardeGothicITCW01Bk';src: url('css/webfonts/2E10A6_1_0.eot');src: url('css/webfonts/2E10A6_1_0.eot?#iefix') format('embedded-opentype'),url('css/webfonts/2E10A6_1_0.woff2') format('woff2'),url('css/webfonts/2E10A6_1_0.woff') format('woff'),url('css/webfonts/2E10A6_1_0.ttf') format('truetype');}
+
+.archive__post__body{
+color:white;
+
+}
+.event_type{
+    width: 261px;
+    position: absolute;
+    z-index: 900;
+    background-color: rgba(0, 0, 0, 0.57);
+    height: 40px;
+    top: 160px;
+	
+	
+  
+}
+
+
+  h2 {
+  color:white;
+       font-size: 36.5px;
+    line-height: 1;
+}
+   
+ 
+}
+
+
+h3 {
+font-size: 24.5px;
+line-height: 1.5;
+}
+  .as-heading-medium, .is-typeset h3 {
+font-size: 1.5625em;
+line-height: 1.28em;
+padding-top: 7px;
+}
+.heading{
+
+		font-family: 'AvantGardeGothicITCW01Bk';
+		width: 83%;
+		display:block;		
+		font-weight: bold;
+		margin-left: 4%;
+		margin-right: 4%;
+		padding-top: 30%;
+		top: -120px;
+		height: 20%;
+		font-size: 50;
+		position: absolute;
+}
+
+.venuelogo{
+	display:none;
+	 width: 420px;
+    height: 500px;
+    background: url("assets/<% print(venue) %>-logo.png") no-repeat;
+    background-size: contain;
+    right: 12px;
+    top: 1530px;
+    z-index: 200;
+    position: absolute;
+	-webkit-filter: invert(100%);
+    
+}
+
+body {
+    background: #66bf00;
+    /* Old browsers */
+    
+    background: -moz-linear-gradient(top, #66bf00 0%, #008a00 78%, #005700 100%, #175e00 100%);
+    /* FF3.6+ */
+    
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #66bf00), color-stop(78%, #008a00), color-stop(100%, #005700), color-stop(100%, #175e00));
+    /* Chrome,Safari4+ */
+    
+    -webkit-linear-gradient(top, #C0F76F 0%, #008A00 78%, #005700 100%, #175E00 100%) background: -o-linear-gradient(top, #66bf00 0%, #008a00 78%, #005700 100%, #175e00 100%);
+    /* Opera 11.10+ */
+    
+    background: -ms-linear-gradient(top, #66bf00 0%, #008a00 78%, #005700 100%, #175e00 100%);
+    /* IE10+ */
+    
+    background: linear-gradient(to bottom, #66bf00 0%, #008a00 78%, #005700 100%, #175e00 100%);
+    /* W3C */
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#66bf00', endColorstr='#175e00', GradientType=0);
+    /* IE6-9 */
+}
+
+#eventsList
+{
+	opacity:0;
+	padding:40px;
+	position:absolute;
+	top:290px;
+}
+
+.comingSoon
+{
+color: #000;
+position: absolute;
+top: 0px;
+/* -webkit-transform: rotate(-45deg); */
+-moz-transform: rotate(-45deg);
+-ms-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+left: 530px;
+width: 340px;
+/* -webkit-transform: rotate(-45deg); */
+-moz-transform: rotate(-45deg);
+-ms-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.archive__post .archive__post__image-holder .archive__post__image
+{
+	    display: block;
+    left: 4px;
+    position: absolute;
+    top: 0;
+    /* width: auto; */
+    height: 200px;
+}
+
+.archive__post .archive__post__image-holder .archive__post__image.archive__post__image--fallback
+{
+	background:#d0d0d0 url(../img/sprite-logos.png) 50% top no-repeat;
+}
+
+
+.archive__post__body
+{
+	width: 730px;
+}
+
+.archive__post__body p
+{
+	margin-right:50px;
+}
+
+
+
+ul,ol
+{
+	margin:-3px 0 10px;
+	padding:0;
+}
+
+.eventHeading
+{
+
+width:435px !important;
+width:435px !important;
+	font-size:35px;
+	line-height:1;
+}
+
+.facilities
+{
+	background:#4B565C;
+	color:#fff;
+	display:inline-block;
+	line-height:1.8461538em;
+	margin-bottom:1em;
+	padding:1px 6px 0;
+}
+
+h4
+{
+	color:#FFF;
+	font-size:30px;
+	font-weight:400;
+	line-height:1.5;
+}
+
+a
+{
+	color:#FFF!important;
+	text-decoration:none;
+}
+
+.logo
+{
+	width:256px;
+}
+#heading{
+
+}
+#heading h1
+{
+	color:#000;
+	left:-500px;
+	left:0;
+	position:absolute;
+	top:70px;
+}
+
+td
+{
+	color:#FFF;
+	width:43%;
+}
+
+table
+{
+	border-collapse:collapse;
+	margin-left:4%;
+	margin-right:4%;
+	width:93%;
+}
+
+.arrow
+{
+	-ms-transform:rotate(-180deg);
+	-webkit-transform:rotate(-180deg);
+	padding:10px;
+	position:absolute;
+	right:10px;
+	top:100px;
+	transform:rotate(-180deg);
+	width:75px;
+}
+
+.off
+{
+	display:none;
+}
+
+.left
+{
+	-ms-transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+	transform:rotate(180deg)!important;
+}
+
+.up
+{
+	-ms-transform:rotate(-90deg);
+	-webkit-transform:rotate(-90deg);
+	transform:rotate(-90deg)!important;
+}
+
+.down
+{
+	-ms-transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	transform:rotate(90deg)!important;
+}
+
+.right
+{
+	-ms-transform:rotate(0deg);
+	-webkit-transform:rotate(0deg);
+	transform:rotate(0deg)!important;
+}
+
+.maintable
+{
+	height:150px;
+	overflow:hidden;
+}
+
+td,th
+{
+	color:#FFF;
+	font-size:15px;
+	padding:6px;
+	text-align:left;
+}
+
+.borderx
+{
+	-o-border-image:url(assets/line.png);
+	-webkit-border-image:url(assets/line.png);
+	border-bottom:0!important;
+	border-image:url(assets/line.png) 96 78 round;
+	border-left:0!important;
+	border-right:0!important;
+	border-width:.09px em!important;
+	display:block!important;
+	height:230px;
+	overflow:hidden!important;
+	padding-bottom:1%!important;
+}
+
+.eventDescription
+{
+	max-height:40px;
+	overflow:hidden;
+}
+
+tr
+{
+	height:200px!important;
+}
+
+.room
+{
+	padding-left:77px;
+}
+
+h5
+{
+	color:#FFF;
+	font-size:20px;
+}
+
+.table1
+{
+	color:#FFF;
+	display:block;
+}
+
+.table1x
+{
+	color:#FFF;
+	left:143px;
+	position:absolute;
+	top:180px;
+	width:86%;
+	z-index:200;
+}
+
+.venue
+{
+	height:200px;
+	left:480px;
+	position:relative;
+	top:-210px;
+	width:400px;
+}
+
+.titlename
+{
+	height:200px;
+	left:80px;
+	top:0;
+	width:400px;
+}
+
+.workshopArrow
+{
+	left:630px;
+	position:relative;
+}
+
+.workshopDiv
+{
+	height:200px;
+	left:0;
+	position:relative;
+	top:0;
+}
+
+.workshopcategory
+{
+	left:0;
+	position:absolute;
+	top:0;
+	width:43%;
+}
+
+.workshoproom
+{
+	left:480px;
+	position:absolute;
+	width:43%;
+}
+
+.workshopName
+{
+	height:200px;
+	left:-30px;
+	position:absolute;
+	top:70px;
+}
+
+.workshopTime
+{
+	left:435px;
+	position:absolute;
+	top:100px;
+	width:200px;
+}
+
+.workshopsTable1
+{
+	left:100px;
+	position:relative;
+}
+
+#content
+{
+	position:relative;
+	top:-110px;
+}
+
+img
+{
+	max-width:100%;
+}
+
+.hidden
+{
+	opacity:0;
+}
+
+#sponsorCylcer main div div.hidden
+{
+	opacity:0;
+}
+
+.archive__post .archive__post__image-holder .venue-image-digiscreenBMAG
+{
+	border-top:3px solid #259D00;
+}
+
+.venue-image--ident--bristol-digiscreenBMAG
+{
+	border-top:3px solid #259D00;
+}
+
+.venue-image--ident-digiscreenBMAG
+{
+	background-color:#30A300;
+	background-repeat:no-repeat;
+	overflow:hidden;
+	position:relative;
+}
+
+#eventsListTable,#scrollerebox
+{
+	position:relative;
+}
+
+.eventHeading,.is-typeset,p
+{
+	color:#FFF;
+}
+
+.eventDate
+{
+	background:rgba(75,86,92,0.61);
+	color:#fff;
+	display:inline-block;
+	font-size:15px;
+	line-height:2;
+	margin-bottom:-3px;
+	padding:1px 6px 0;
+}
+
+.archive__post__image
+{
+	left:3px;
+}
+
+.eventLocation marquee span
+{
+	font-size:15px;
+	line-height:1.7;
+	text-align:left;
+}
+
+.eventLocation
+{
+	-webkit-marquee-speed:slow;
+	background:rgba(75,86,92,0.61);
+	color:#fff;
+	display:inline-block;
+	font-size:15px;
+	line-height:1.8461538em;
+	margin-bottom:-3px;
+	marquee-speed:slow;
+	padding:5px 6px 0;
+	position:absolute;
+	right:0;
+	text-align:right;
+	top:0;
+	width:8pc;
+}
+
+.aside
+{
+	float:right;
+	font-size:31px;
+	left:760px;
+	position:absolute;
+	top:70px;
+	width:210px;
+}
+
+.facilitiesDirection
+{
+	background-color:grey;
+	float:right;
+	width:50px;
+}
+
+.facilitiesDirection img
+{
+	background-blend-mode:inherit;
+	background-color:rgba(0,0,0,0.33);
+	left:152px!important;
+	top:10px;
+	width:40px;
+}
+
+.facilitiesimg
+{
+	left:-3px!important;
+	position:relative;
+}
+
+.facilityName
+{
+	height:50px;
+}
+
+.shadow
+{
+	-moz-box-shadow:-11px -3px 39px -6px rgba(0,0,0,0.75);
+	-webkit-box-shadow:-11px -3px 39px -6px rgba(0,0,0,0.75);
+	border-collapse:seperate;
+	border-spacing:2px;
+	box-shadow:-32px -3px 179px -36px rgba(0,0,0,0.75);
+	color:#FFF;
+	font-size:20px;
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  
+  #heading,#heading h1
+	{
+		display:none;
+		top:-100px!important;
+	}
+	
+	#content {
+    position: relative;
+    top: -360px;
+}
+
+	#sponsorCylcer
+	{
+		bottom:280px;
+		height:1590px;
+		left:-30px;
+		margin-left:auto;
+		margin-right:auto;
+		overflow:hidden;
+		padding:40px;
+		position:relative;
+		vertical-align:bottom;
+		width:1000px;
+	}
+	
+		
+	#Maskingscrollerebox
+	{
+		bottom: 380px;
+    height: 535px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding: 12px;
+    position: absolute;
+    top: 360px;
+    vertical-align: bottom;
+    width: 870px;
+	}
+	
+	
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  #bmagLOGO
+	{
+		display:none;
+	}
+  #heading,#heading h1
+	{
+		display:none;
+		left:-250px;
+		top:-100px!important;
+	}
+	
+	#sponsorCylcer {
+    bottom: 280px;
+    height: 1590px;
+    left: -30px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding: 50px;
+    position: relative;
+    vertical-align: bottom;
+    width: 971px;
+    padding-right: 170px;
+}
+	#content {
+    position: relative;
+    top: -80px;
+}
+
+.aside {
+    float: right;
+    font-size: 31px;
+    left: 760px;
+    position: absolute;
+    top: 40px;
+    width: 130px;
+}
+
+#Maskingscrollerebox {
+    bottom: 380px;
+       height: 225px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding: 12px;
+    position: absolute;
+    top: 675px;
+    vertical-align: bottom;
+   width: 797px;
+
+	left:45px;
+}
+	
+	
+	.archive__post__body {
+    width: 80%;
+}
+
+
+	
+}
+
+
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+
+
+@media screen  and (min-width: 200px) and ( min-height: 200px) and (max-height: 900px) {
+	.archive__post .archive__post__image-holder .archive__post__image
+	{
+		display:block;
+		height:70px;
+		left:4px;
+		position:absolute;
+		top:0;
+		width:88px;
+	}
+	
+	.aside
+	{
+		float:right;
+		font-size:31px;
+		left:760px;
+		position:absolute;
+		top:40px!important;
+		width:210px;
+	}
+	
+
+	
+	#Maskingscrollerebox
+	{
+		bottom:380px;
+		height:135px;
+		margin-left:auto;
+		margin-right:auto;
+		overflow:hidden;
+		padding:12px;
+		position:absolute;
+		top:290px;
+		vertical-align:bottom;
+		width:870px;
+	}
+	
+	.archive__post .archive__post__body
+	{
+		min-height:144px;
+		padding-left:100px;
+	}
+	
+	#content
+	{
+		position:relative;
+		top:-80px!important;
+	}
+	
+	.eventHeading
+	{
+		width: 433px!important;
+		font-size:20px!important;
+		line-height:1;
+	}
+	
+	#bmagLOGO
+	{
+		display:none;
+	}
+	
+	.borderx
+	{
+			height: 150px!important;
+    width: 750px;
+	}
+	
+	#sponsorCylcer
+	{
+		bottom:280px;
+		height:1590px;
+		left:-30px;
+		margin-left:auto;
+		margin-right:auto;
+		overflow:hidden;
+		padding:40px;
+		position:relative;
+		vertical-align:bottom;
+		width:1000px;
+	}
+	
+	#heading,#heading h1
+	{
+		display:none;
+		top:-100px!important;
+	}
+}
+
+@media screen and (min-width: 300px) and (min-height: 300px )and (max-width: 1900px)and (max-height: 600px ){
+	.eventsTable
+	{
+		padding:30px;
+		width:80%;
+	}
+	
+	#heading,#heading h1
+	{
+		display:none;
+		top:-100px!important;
+	}
+	
+	#bmagLOGO
+	{
+		display:block;
+		position:absolute;
+		right:-780px;
+		top:-260px;
+	}
+	
+	#Maskingscrollerebox
+	{
+		bottom:380px;
+		height:535px;
+		left:930px;
+		margin-left:auto;
+		margin-right:auto;
+		overflow:hidden;
+		padding:0;
+		position:absolute;
+		top:-250px;
+		vertical-align:bottom;
+		width:870px;
+	}
+	
+	#scrollerebox
+	{
+		left:100px;
+		position:relative;
+		width:720px;
+	}
+	
+	#sponsorCylcer
+	{
+		bottom:280px;
+		height:1590px;
+		left:-30px;
+		margin-left:auto;
+		margin-right:auto;
+		overflow:hidden;
+		padding:40px;
+		position:relative;
+		vertical-align:bottom;
+		width:1000px;
+	}
+	
+	#header
+	{
+		height:50px;
+		width:100%;
+	}
+	
+	#sidebar
+	{
+		height:100%;
+		left:0;
+		position:absolute;
+		top:-70px;
+		width:82px;
+	}
+}
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+	.eventsTable
+	{
+		color:#FFF;
+		padding:30px;
+		width:778px;
+	}
+	
+	#heading
+	{
+	
+		top:-195px!important;
+	}
+	
+	#bmagLOGO
+	{
+		display:block;
+		position:absolute;
+		right:-780px;
+		top:-260px;
+	}
+	
+	#Maskingscrollerebox
+	{
+		bottom:380px;
+		height:845px;
+		left:930px;
+		margin-left:auto;
+		margin-right:auto;
+		overflow:hidden;
+		padding:0;
+		position:absolute;
+		top:-60px;
+		vertical-align:bottom;
+		width:870px;
+	}
+	
+	#scrollerebox
+	{
+		left:100px;
+		position:relative;
+		width:720px;
+	}
+	
+	#sponsorCylcer
+	{
+		bottom:280px;
+		height:1590px;
+		left:-30px;
+		margin-left:auto;
+		margin-right:auto;
+		overflow:hidden;
+		padding:40px;
+		position:relative;
+		top:-102px;
+		vertical-align:bottom;
+		width:1000px;
+	}
+	
+	#header
+	{
+		height:232px;
+		width:100%;
+	}
+	
+	#sidebar
+	{
+		height:100%;
+		left:0;
+		position:absolute;
+		top:-70px;
+		width:82px;
+	}
+}
+
+@media screen and (min-width: 1080px) and (min-height: 1900px) {
+	.eventsTable
+	{
+		color:#FFF;
+		padding:30px;
+		width:787px;
+	}
+	
+	#sidebar
+	{
+		height:120%;
+		left:0;
+		position:absolute;
+		width:82px;
+	}
+	
+	#header
+	{
+		height:332px;
+		width:100%;
+	}
+	
+	#bmagLOGO
+	{
+		display:block;
+		position:absolute;
+		right:40px;
+		top:-260px;
+	}
+	
+	#Maskingscrollerebox /*screen size portrait */
+	{
+		bottom:380px;
+		height:525px;
+		left:40px;
+		margin-left:auto;
+		margin-right:auto;
+		overflow:hidden;
+		padding:40px;
+		position:absolute;
+		
+		top: 1031px;
+		vertical-align:bottom;
+		width:797px;
+	}
+	
+	#sponsorCylcer
+	{
+		bottom:280px;
+		height:1590px;
+		left:-30px;
+		margin-left:auto;
+		margin-right:auto;
+		overflow:hidden;
+		padding:40px;
+		position:relative;
+		top:0;
+		vertical-align:bottom;
+		width:1000px;
+	}
+}
+.facilitiesDirection{
+position: relative;
+right: 145px;
+top:-226px;
+-webkit-filter: invert(100%);
+}
+.more_events h1{
+
+color:#FFF;
+font-size:30;
+}
+.more_events{
+display:none;
+position:absolute;
+top:1560;
+height:150px;;
+width:500px;
+color #FFF;
+left:90px;
+font-size:30;
+}
+</style>
+
+<div id="sidebar"></div>
+
+<div id="heading">
+<h1>What's on</h1>
+</div>
+<div class="venuelogo"></div>
+<div id="bmagLOGO" class="hidden">
+<img  class="logo" width="256px" src="assets/bmag_logo transparentx.png">
+</div>
+
+<div id="sponsorCylcer"  class="hidden">
+<main id="content" role="main" class="section">
+
+<aside role="complementary" class="aside hidden">
+		<form class="filter filter--tabs filter--events">
+		<% 
+		
+				 function UrlExists(url)
+{
+    var http = new XMLHttpRequest();
+    
+	try{
+	http.open('HEAD', url, false);
+    http.send();
+	}
+	catch(err){
+	return false;
+	}
+    return http.status!=404;
+}
+		_.each(facilities, function(shop){ 
+		 var EventImage = "images/";
+				  var backgroundSize="cover"
+				   if(shop.get('imageIrn')){
+				   EventImage="images/"+shop.get('imageIrn') + '.jpg'
+				   
+				
+				   }
+				   
+				
+				  
+				  
+				  if(shop.get('images')){
+				  if(shop.get('images')[0]){
+				  EventImage="images/"+shop.get('images')[0].filename	
+						 _.each(shop.get('images'), function(image,i){
+									
+									if(i<2){				 
+									if( image.orientation=='landscape'){
+										backgroundSize="contain"						
+										EventImage="images/"+image.filename	
+										if(	!UrlExists(EventImage))	{
+										EventImage="http://museums.bristol.gov.uk/multimedia/entry.php?request=resource&irn="+ shop.get('images')[0].irn	+ "&width=300&format=jpeg"
+										}										
+									 }	
+									 }
+					
+						})
+				 }}
+				 
+				 
+		%> 
+					<div class="filter__group filter__group--type">
+						<div class="filter__tab filter__tab--first">
+							<div class="archive__post__image-holder ">
+							<a href="#"><span class="venue-image--ident__icon venue-image--ident__icon--bristol-museum-and-art-gallery"></span>
+							<div class="archive__post__image venue-image--digiscreenBMAG venue-image--ident-digiscreenBMAG venue-image--ident--digiscreenBMAG" style="background-image: url( '<% print(EventImage) %>');background-size: <% print(backgroundSize) %>;">
+							</div>
+							</a>
+							
+							</div>
+							<span class="facilityName" >
+							<%= shop.get('name') %>
+							</span>
+							<ul class="event-type__list">
+							<li><%= shop.get('event_space') %></a>				
+							</li>
+							
+							</ul>
+							<img class="facilitiesimg" src="<% print(EventImage) %>" />
+							<p><%= shop.get('strapline') %></p> 
+							<% if(shop.get('arrowDirection')!=""){%>
+							<div class="facilitiesDirection" ><%= shop.get('arrowDirection') %></div>
+							<% }%>
+						</div>
+					</div>
+					<%}) %> 
+			</form>
+
+</aside>
+<div id="eventsListTable" class="eventsTable bordered hidden">
+<% var counter = 0
+ var NumberOfLogosDisdplayed = 0
+	
+
+		 _.each(eventSandWorkshops, function(event){ 
+		 
+			if(event.get('type') =="Facilities"){return;}
+		  var EventImage = "images/";
+		  var backgroundSize="cover"
+		   if(event.get('imageIrn')){
+		   EventImage="images/"+event.get('imageIrn') + '.jpg'
+		   /*
+		   	if(	!UrlExists(EventImage))	{
+			EventImage="http://museums.bristol.gov.uk/multimedia/entry.php?request=resource&irn="+ event.get('imageIrn')	+ "&width=300&format=jpeg"
+			}
+		   */
+		   }
+		   
+		
+		  
+		  if(event.get('images')){
+		  if(event.get('images')[0]){
+		  EventImage="images/"+event.get('images')[0].filename.replace('.Tif','.jpg').replace('.TIF','.jpg').replace('.tif','.jpg')	
+				 _.each(event.get('images'), function(image,i){
+							
+							if(i<2){				 
+							if( image.orientation=='landscape'){
+								backgroundSize="contain"						
+								EventImage="images/"+image.filename			
+								
+								if(	!UrlExists(EventImage))	{
+					EventImage="http://museums.bristol.gov.uk/multimedia/entry.php?request=resource&irn="+ image.irn	+ "&width=300&format=jpeg"
+								}
+													
+							 }	
+							 }
+				})
+		 }}
+		 
+
+		 
+	
+		
+	if(NumberOfLogosDisdplayed==4 ){%>
+	<div id="Maskingscrollerebox"><div id="scrollerebox">
+	<%}  //start from the next batch%>
+		 <div class="backgroundToEvent">
+		<div id="sponsor_<%  print(counter) %>"  class="borderx borderxpost-2717 bmag-whats-on type-bmag-whats-on status-publish hentry archive__post with-trailer">
+
+		<div class="archive__post__image-holder ">
+		<div class="event_type">
+		<h2> <%= event.get('type') %></h2>
+		</div>
+		<a href="#"><span class="venue-image--ident__icon venue-image--ident__icon--bristol-museum-and-art-gallery"></span><div class="archive__post__image venue-image--digiscreenBMAG venue-image--ident-digiscreenBMAG venue-image--ident--digiscreenBMAG" style="background-image: url( '<% print(EventImage) %>');background-size: auto 100%;<% print(backgroundSize) %>;">
+		 
+		</div></a>
+		
+		</div>
+		<div class="archive__post__body">
+		
+
+			<p class="eventDate">
+				
+			<% if(event.get('startDate') == event.get('endDate')){ %>
+				<%= event.get('startDateInwords') %>
+			<%} else if(event.get('startDate') == event.get('endDate') == event.get('endDate')){ %>
+			
+			
+			<%} else { %>
+				<%= event.get('startDateInwords') %>—<%= event.get('endDate') %>	</p>
+				<br>
+			  <%} %>
+			  <% if(event.get('timings')!=""){%>
+					 
+
+
+					<%= event.get('timings') %> 			
+								
+					<% }else if(event.get('startTime') != ""){ %>
+				<p><h5><%= event.get('type') %></h5>	<%= event.get('startTime') %> : <%= event.get('startTimeMinutes') %> <%= event.get('startTimeAMPM') %> —  <%= event.get('endTime') %>:<%= event.get('endTimeMinutes') %> <%= event.get('endTimeAMPM') %>	</p>
+			<%} else{ %>
+			
+			  <%} %>
+			<% if(event.get('comingSoon')!="Y"){%>
+			<div class="eventLocation">
+			<marquee ><span ><%= event.get('room') %><%= event.get('event_space') %></span></marquee>
+			
+			</div>
+				<%}%>
+				<h1 class="as-heading-medium as-heading--light">
+					<div class="eventHeading" rel="bookmark"><%= event.get('name') %> <span><%= event.get('roomLocation') %><% if(event.get('event_space') !=""){%>
+
+					<span>
+					<% }%>
+					</div>
+				</h1>
+				
+			
+				
+				<p ><%= event.get('strapline') %></p> 
+			
+				<% if(event.get('comingSoon')=="Y"){%>
+					<div class="comingSoon"><h3>COMING SOON</h3>		</div>		
+				<% } else { %>
+			
+			
+				
+
+					<ul class="event-type__list">
+					<li><a href="?event-type=exhibitions" ><%= event.get('priceDetails') %></a></li>	
+				
+					
+									
+					<li><%= event.get('arrowDirection') %></li>	
+					</ul>
+				<% }  %>	
+					</div>
+			</div>
+
+
+	</div>
+	
+	<div class="more_events">	
+	
+	</div>
+	
+	
+
+<% NumberOfLogosDisdplayed++
+	if(NumberOfLogosDisdplayed==4 ){%>
+	</div ><!--scrollerbox -->
+	</div ><!--Maskingscrollerbox -->
+	<%}  //start from the next batch
+counter++ 
+} ); %>
+												<!-- end of the loop -->
+
+									</div>
+			</div>
+	</div>
+	</main>
+
+
+
+
+
+</div>
+</div>
+<script>
+/*
+			setTimeout(function() {									
+				 $("#heading").animate({left: '78px'});	
+							}, 1* 700);
+*/
+							
+
+$('#sponsorCylcer img').height()
+$('#eventsList').delay(500).animate({ opacity: 1 }, 1000);
+</script>

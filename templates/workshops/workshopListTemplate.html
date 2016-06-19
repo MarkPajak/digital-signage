@@ -1,0 +1,65 @@
+<style>
+#workshops{
+left: 50px;
+position: relative;
+}
+
+.timing{
+
+right: 380px;
+position: relative;
+}
+</style>
+
+<table  class="bordered">
+	<thead>
+		
+	<tr style="display:none">
+		<th style="display:none">image</th>
+		<th Name></th>
+		<th ></th>
+		<th Category></th>
+		<th>Start Date</th>
+		<th>End Date</th>
+		<th>Timings</th>
+		<th>Capacity and Requirements</th>
+	</tr>
+	</thead>
+<tbody>
+
+
+
+
+ <% 
+  var currentCategory ="none";
+  var currentRoom ="none";
+   var printedRoom ="none";
+   var iteration=2
+ _.each(events, function(event){ 
+
+
+ %>
+
+
+  
+
+			<tr  class="workshop">			
+				<td style="width:320px;"><h4><%= event.get('category') %></h4></td>
+				<td style="width:320px;"><h4><%= event.get('room') %></h4><%= event.get('roomLocation') %></td>			
+			</tr>
+
+<%  
+currentCategory=event.get('category') 
+currentRoom=event.get('room') %>
+<tr  >		
+	<td ><h5><%= event.get('name') %></h5></td>
+	<td ><text class="timing"><%= event.get('startTime') %> - <%= event.get('endTime') %>	</text></td> 
+</tr>
+ 	  
+<%
+
+ });
+ %>
+	</tbody>
+</table>
+
