@@ -47,4 +47,9 @@ https://docs.google.com/spreadsheets/d/1AjghZlrQOOjs4OzW0rpt_WOftFG9Uidm7PnP4rnc
 #EVENTS FEED
 
  - configure the backbone models to connect to an events api (field names must match the source data - these will need updating throughout the app if different)
+ - publish events.JSON at your own url using this structure:
+ 
+ http://museums.bristol.gov.uk/sync/data/events.JSON
+
+
  
