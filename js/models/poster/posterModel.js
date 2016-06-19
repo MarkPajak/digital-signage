@@ -15,7 +15,9 @@ define([
 			venue: 'venue'		,
 			caption: 'caption'		,
 			strapline: 'strapline'	,
-			copyright: ''					
+			copyright: ''	,
+			name:"xx"	,
+			type:"xx"			
 			
 		
 

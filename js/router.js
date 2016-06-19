@@ -99,7 +99,7 @@ define([
 	 private_event_mode: function(viewName,nextView,ViewToLoad,no_internet,options,venue,stick,logoOffset,posterOffset,machine,settings,type){
 	
 		
-						dir= "https://script.google.com/macros/s/AKfycbwM0s-BIV9oOHtyV-wAoNirZHaf1eWXph8klsh8seYp3VdVE_JA/exec"
+						google_drive_public_dir= "https://script.google.com/macros/s/AKfycbwM0s-BIV9oOHtyV-wAoNirZHaf1eWXph8klsh8seYp3VdVE_JA/exec"
 						
 						var isprivateevent=false
 						var self=this
@@ -107,7 +107,7 @@ define([
 						var number_ofFiles = 0
 						var number_of_new_Files = 0
 						$.ajax({
-							url: dir,
+							url: google_drive_public_dir,
 							success: function (data) {
 								number_ofFiles=data.length
 								_.each(data, function ( val) {
@@ -115,18 +115,18 @@ define([
 									testmachine=options.machine.replace(" ","").toLowerCase()
 									pictures_in_venue_folder = val.folder.replace(" ","").toLowerCase()
 									testvenue=options.venue.replace(" ","").toLowerCase()
-									if( val.type.match(/.(jpe?g|png|JPEG|JPG|mp?4|gif)$/)&& 
+									if( val.file.match(/.(jpe?g|png|JPEG|mov|MOV|JPG|mp?4|gif)$/)&& 
 									  (pictures_in_machine_name_folder==testmachine||pictures_in_venue_folder==testvenue)) {	
 									   isprivateevent=true	
 									} 
 								})
 								if(isprivateevent==true	){
-									var privateEventView = new PrivateEventsView({dir:dir,data:data,no_internet:no_internet,options,venue:venue,stick: stick,logoOffset:logoOffset,posterOffset:posterOffset,machine:machine,settings:settings,type: type});
+									var privateEventView = new PrivateEventsView({dir:google_drive_public_dir,data:data,no_internet:no_internet,options,venue:venue,stick: stick,logoOffset:logoOffset,posterOffset:posterOffset,machine:machine,settings:settings,type: type});
 									Globals.curentView=privateEventView		
 									setInterval(function() {
 										 dont_reload=false
 										 $.ajax({
-											url: dir,
+											url: google_drive_public_dir,
 											success: function (data) {
 												number_of_new_Files=data.length
 												_.each(data, function ( val) {
@@ -134,7 +134,7 @@ define([
 														testmachine=options.machine.replace(" ","").toLowerCase()
 														pictures_in_venue_folder = val.folder.replace(" ","").toLowerCase()
 														testvenue=options.venue.replace(" ","").toLowerCase()
-														 if( val.type.match(/.(jpe?g|png|JPEG|JPG|mp?4|gif)$/)&&
+														 if( val.file.match(/.(jpe?g|png|JPEG|mov|MOV|JPG|mp?4|gif)$/)&&
 														 (pictures_in_machine_name_folder==testmachine
 																||pictures_in_venue_folder==testvenue)) {	
 																dont_reload=true	

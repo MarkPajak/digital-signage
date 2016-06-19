@@ -37,12 +37,15 @@ define([
 								options.venue=options.venue.replace(" ","").toLowerCase()
 								
 								
-									  if( val.type.match(/.(jpe?g|png|JPEG|JPG|mp?4|gif)$/)&& (pictures_in_machine_name_folder==options.machine
+									  if(val.size<=137000000&& val.file.match(/.(jpe?g|png|JPEG|mov|MOV|JPG|mp?4|gif)$/)&& (pictures_in_machine_name_folder==options.machine
 										||pictures_in_venue_folder==options.venue)
 									  ) { 
 
 									var board1 = new PosterModel({
 									  path: val.link ,	 
+									  type: val.type ,	 
+									  file: val.file ,
+										size:val.size									  
 									});
 									
 									 self.PostersCollection.add(board1)
