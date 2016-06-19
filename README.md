@@ -30,6 +30,19 @@ This application is running across multiple Bristol Museum Venues, on various sc
 
  - change the google_drive_public_dir to your public image directory (router.js)
  - set folders in the directory to match venue and machine name in the url parameters
+ - current functionality is dependent on the following google web service:
+  
+https://script.google.com/macros/s/AKfycbwM0s-BIV9oOHtyV-wAoNirZHaf1eWXph8klsh8seYp3VdVE_JA/exec
+
+This returns a list of the images and folders in the Google public directory of th euser hosting the google Apps Script. To make this work with your onw google drive you'll need to copy the script and republish under your hosting.
+
+The script is embedded in the follwoing public google sheet, which you can copy:
+
+https://docs.google.com/spreadsheets/d/1AjghZlrQOOjs4OzW0rpt_WOftFG9Uidm7PnP4rncqsw/edit?usp=sharing
+
+
+
+
 
 #EVENTS FEED
 
