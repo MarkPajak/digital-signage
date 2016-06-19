@@ -483,19 +483,18 @@ $(function () {
     // 1. Initialize fotorama manually.
     var $fotoramaDiv = $('.fotorama').fotorama({
 	thumbwidth :100,
-	thumbheight :100,	
+	thumbheight :100,
+	loop:true,
+	arrows: false,
+	transition:"crossfade"	
 	});
+
 	
-	fotorama.setOptions({
-				loop:true,
-				arrows: false,
-				transition:"crossfade"
-});
 	
 		  
 		  
 		  
-	
+/*	
   $('.fotorama').on(
   'fotorama:show',
   function (e, fotorama, extra) {
@@ -512,6 +511,7 @@ $(function () {
 				}
 			}
   });
+  */
  
   $('.fotorama').on(
   'fotorama:showend',
@@ -519,13 +519,23 @@ $(function () {
 	
 		if((fotorama.activeFrame.videox)=="video"){
 		  currentvideo=$(".fotorama__active video").get(0)
-		  if(currentvideo){
-		  currentvideo.play();
+		 
+		 if(currentvideo){
+
+		 currentvideo.play();
+		  currentvideo.oncanplay = function(e) {
+				
+		  
 		  fotorama.stopAutoplay()
+		
+		};
+		
+		  currentvideo.onended=function(){}
 		  currentvideo.onended = function(e) {
 				fotorama.show('>');
 				fotorama.startAutoplay(<% print(looptime * 1000) %>)
 				};
+				
 		}
 		}
   });
