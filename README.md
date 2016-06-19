@@ -1,4 +1,4 @@
-# Digital Signage
+# Digital Signage (museum, venue, gallery)
 Digital signage web application capable of multiple orientation, online offline, events list and poster modes
 
 This application is running across multiple Bristol Museum Venues, on various screen sizes and orientations.
