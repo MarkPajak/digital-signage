@@ -13,24 +13,25 @@ This application is running across multiple Bristol Museum Venues, on various sc
  - Optimised for 1080 x 1920 landscape and portrait screens
  - Can have screen-specific settings to manage different venues / branding
  - Timings for each mode can be configured
+ - automatic content refresh to allow for remote control
  
 
-SETUP
+#SETUP
 
  - to see basic use, download the zip and open startme.bat (in windows)
  - use Chrome dev tools>emulator to set screen dimensions to 1080 x 1920 or 1920 x 1080
  
-ADVANCED
+#ADVANCED
 
  - set machine specific settings by building your own settings.JSON file
  - use the url parameters to load up the settings
 
-GOOGLE DRIVE
+#GOOGLE DRIVE
 
  - change the google_drive_public_dir to your public image directory (router.js)
  - set folders in the directory to match venue and machine name in the url parameters
 
-EVENTS FEED
+#EVENTS FEED
 
  - configure the backbone models to connect to an events api (field names must match the source data - these will need updating throughout the app if different)
- - 
+ 
