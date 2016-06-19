@@ -20,10 +20,11 @@ define([
 			this.posterOffset = (options.posterOffset)
 			this.stick = (options.stick)
 			this.venue = (options.venue)
+			this.dir = (options.dir)
 			this.orientationSpecific = settings.posterOrientationSpecific
 			this.settings = (options.settings)
 			this.no_internet=options.no_internet ||false
-			dir= "https://script.google.com/macros/s/AKfycbwM0s-BIV9oOHtyV-wAoNirZHaf1eWXph8klsh8seYp3VdVE_JA/exec"
+			
 	
 							    self.PostersCollection = new PostersCollection() 
 							

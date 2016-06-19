@@ -121,7 +121,7 @@ define([
 									} 
 								})
 								if(isprivateevent==true	){
-									var privateEventView = new PrivateEventsView({data:data,no_internet:no_internet,options,venue:venue,stick: stick,logoOffset:logoOffset,posterOffset:posterOffset,machine:machine,settings:settings,type: type});
+									var privateEventView = new PrivateEventsView({dir:dir,data:data,no_internet:no_internet,options,venue:venue,stick: stick,logoOffset:logoOffset,posterOffset:posterOffset,machine:machine,settings:settings,type: type});
 									Globals.curentView=privateEventView		
 									setInterval(function() {
 										 dont_reload=false
