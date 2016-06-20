@@ -50,7 +50,7 @@ define([
 	this.totalLogos =response.models.length
 							if(response.models.length==0){
 								
-					window.history.pushState('object or string', 'Title', '#' + self.nextView + '/venue'+	venue+"/logo"+ self.logoOffset +"/poster"+self.posterOffset+"/machine"+self.machineName);
+					window.history.pushState('object or string', 'Title', '#' + self.nextView + '/venue'+	self.venue+"/logo"+ self.logoOffset +"/poster"+self.posterOffset+"/machine"+self.machineName);
 					window.location.reload();
 							}
 			
