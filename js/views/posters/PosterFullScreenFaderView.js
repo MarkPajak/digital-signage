@@ -6,7 +6,8 @@ define([
   'text!templates/posters/posterFullScreenFaderTemplate_1080x1920.html',
   'collections/posters/PostersCollection',
   'helpers/Globals',
-], function($, _, Backbone, posterFullScreenTemplate ,PostersCollection,Globals){
+  'fotorama_amd',
+], function($, _, Backbone, posterFullScreenTemplate ,PostersCollection,Globals,fotorama_amd){
 
   var PosterView = Backbone.View.extend({
   
