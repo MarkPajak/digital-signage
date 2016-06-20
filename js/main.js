@@ -19,6 +19,10 @@ require([
 console.log('production mode - logging disabled')
 console.log = function() {}
 
+require.onerror = function() {
+  location.reload()	
+}
+
 App.initialize();
     //This function is called when scripts/helper/util.js is loaded.
     //If util.js calls define(), then this function is not fired until
