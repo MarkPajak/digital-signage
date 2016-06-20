@@ -23,7 +23,7 @@ define([
 			this.nextView=(options.nextView)
 			this.venue = (options.venue)
 			this.settings = (options.settings)
-		        this.machineName = (options.machineName)
+		        this.machineName = (options.machine)
 			this.totalLogos = 0
 			//NB this is hard coded: will need to change this if size of sponsor logos changes. Also may need to change if portrait mode
 			this.numberofLogosInview = 12
