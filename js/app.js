@@ -19,9 +19,7 @@ define([
   this.unbind();
 };
 
-requrejs.onerror = function() {
-  location.reload()	
-}
+
  
 
 
