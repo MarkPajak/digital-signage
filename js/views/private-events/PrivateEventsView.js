@@ -5,7 +5,7 @@ define([
   'backbone',
   'text!templates/private-events/private-events.html',
   'collections/posters/PostersCollection',
-  'models/poster/PosterModel',
+  'models/poster/posterModel',
   'helpers/Globals',
 ], function($, _, Backbone, privateEventsTemplate ,PostersCollection,Globals){
 
