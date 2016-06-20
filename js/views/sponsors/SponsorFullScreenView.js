@@ -48,8 +48,9 @@ define([
 	var self = this;
 	this.totalLogos =response.models.length
 							if(response.models.length==0){
-								window.history.pushState('object or string', 'Title', '#posters/venue'+	self.venue + "/logo"+self.logoOffset+"/poster"+self.posterOffset+"/machine"+self.settings.machineName);
-								window.location.reload();
+								
+					window.history.pushState('object or string', 'Title', '#' + nextView + '/venue'+	venue+"/logo"+ logoOffset +"/poster"+self.posterOffset+"/machine"+machineName);
+					window.location.reload();
 							}
 			
 
