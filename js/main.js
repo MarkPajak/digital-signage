@@ -6,6 +6,7 @@ require.config({
 	backbone:'libs/backbone/backbone-min',	
 	templates: '../templates',
 	Globals:'helpers/Globals',
+	fotorama_amd:'libs/fotorama/fotoramaAMD',
 	workshops:'text!data/workshops.JSON'
 	}
 	})
