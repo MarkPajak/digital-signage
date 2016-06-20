@@ -33,7 +33,7 @@ define([
 	
 		goToNextView: function(venue,logoOffset,posterOffset,nextView,backupNextView){	
 					var self=this	
-					window.history.pushState('object or string', 'Title', '#' + nextView + '/venue'+	venue+"/logo"+ logoOffset +"/poster"+self.posterOffset+"/machine"+machineName);
+					window.history.pushState('object or string', 'Title', '#' + self.nextView + '/venue'+	self.venue+"/logo"+ logoOffset +"/poster"+self.posterOffset+"/machine"+self.machineName);
 					window.location.reload();
 
 						//if(Globals.curentView){
@@ -49,7 +49,7 @@ define([
 	this.totalLogos =response.models.length
 							if(response.models.length==0){
 								
-					window.history.pushState('object or string', 'Title', '#' + nextView + '/venue'+	venue+"/logo"+ logoOffset +"/poster"+self.posterOffset+"/machine"+machineName);
+					window.history.pushState('object or string', 'Title', '#' + self.nextView + '/venue'+	venue+"/logo"+ self.logoOffset +"/poster"+self.posterOffset+"/machine"+self.machineName);
 					window.location.reload();
 							}
 			
