@@ -7,7 +7,8 @@ define([
   'collections/posters/PostersCollection',
   'models/poster/posterModel',
   'helpers/Globals',
-], function($, _, Backbone, privateEventsTemplate ,PostersCollection,Globals){
+  'fotorama_amd'
+], function($, _, Backbone, privateEventsTemplate ,PostersCollection,Globals,fotorama_amd){
 
   var PrivateEventView = Backbone.View.extend({
   
