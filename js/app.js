@@ -18,6 +18,10 @@ define([
   this.$el.empty();
   this.unbind();
 };
+
+requrejs.onerror = function() {
+  location.reload()	
+}
  
 
 
