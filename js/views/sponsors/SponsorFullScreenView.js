@@ -23,7 +23,6 @@ define([
 			this.nextView=(options.nextView)
 			this.venue = (options.venue)
 			this.settings = (options.settings)
-		        this.machineName = (options.machine)
 			this.totalLogos = 0
 			//NB this is hard coded: will need to change this if size of sponsor logos changes. Also may need to change if portrait mode
 			this.numberofLogosInview = 12
@@ -34,7 +33,7 @@ define([
 	
 		goToNextView: function(venue,logoOffset,posterOffset,nextView,backupNextView){	
 					var self=this	
-					window.history.pushState('object or string', 'Title', '#' + self.nextView + '/venue'+	self.venue+"/logo"+ logoOffset +"/poster"+self.posterOffset+"/machine"+self.machineName);
+					window.history.pushState('object or string', 'Title', '#' + nextView + '/venue'+	venue+"/logo"+ logoOffset +"/poster"+self.posterOffset+"/machine"+machineName);
 					window.location.reload();
 
 						//if(Globals.curentView){
@@ -49,9 +48,8 @@ define([
 	var self = this;
 	this.totalLogos =response.models.length
 							if(response.models.length==0){
-								
-					window.history.pushState('object or string', 'Title', '#' + self.nextView + '/venue'+	self.venue+"/logo"+ self.logoOffset +"/poster"+self.posterOffset+"/machine"+self.machineName);
-					window.location.reload();
+								window.history.pushState('object or string', 'Title', '#fader/venue'+	self.venue + "/logo"+self.logoOffset+"/poster"+self.posterOffset+"/machine"+self.settings.machineName);
+								window.location.reload();
 							}
 			
 
