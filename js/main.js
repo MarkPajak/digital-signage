@@ -5,9 +5,9 @@ require.config({
 	underscore:'libs/underscore/underscore-min',
 	backbone:'libs/backbone/backbone-min',	
 	templates: '../templates',
-	Globals:'helpers/Globals',
 	fotorama_amd:'libs/fotorama/fotoramaAMD',
-	workshops:'text!data/workshops.JSON'
+	workshops:'text!data/workshops.JSON',
+	Globals:'helpers/Globals'
 	}
 	})
 

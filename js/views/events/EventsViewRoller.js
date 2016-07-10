@@ -10,9 +10,8 @@ define([
   'collections/arrows/ArrowCollection',
   'text!templates/events/blankEvent_1080x1920.html',
   'text!templates/workshops/workshopListTemplate.html',
-  'text!templates/sponsors/sponsorListTemplate.html',
-  'helpers/Globals'
-], function($, _, Backbone, EventsCollection,WorkShopcollection,SponsorCollection, MessagesCollection,ArrowCollection, eventList,workshopListTemplate,SponsorListTemplate,Globals){
+  'text!templates/sponsors/sponsorListTemplate.html'
+], function($, _, Backbone, EventsCollection,WorkShopcollection,SponsorCollection, MessagesCollection,ArrowCollection, eventList,workshopListTemplate,SponsorListTemplate){
 
   var EventView = Backbone.View.extend({
   

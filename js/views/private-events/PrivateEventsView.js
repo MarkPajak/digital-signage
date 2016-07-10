@@ -6,7 +6,7 @@ define([
   'text!templates/private-events/private-events.html',
   'collections/posters/PostersCollection',
   'models/poster/posterModel',
-  'helpers/Globals',
+  'Globals',
   'fotorama_amd'
 ], function($, _, Backbone, privateEventsTemplate ,PostersCollection,Globals,fotorama_amd){
 

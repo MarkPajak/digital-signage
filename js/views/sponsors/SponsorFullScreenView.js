@@ -5,7 +5,7 @@ define([
   'backbone',
   'text!templates/sponsors/sponsorListTemplate.html',
   'collections/sponsors/SponsorCollection',
-  'helpers/Globals',
+  'Globals',
 ], function($, _, Backbone, SponsorListTemplate ,SponsorCollection,Globals){
 
   var SponsorView = Backbone.View.extend({

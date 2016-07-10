@@ -2,9 +2,8 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'models/instagram/instagram',
-  'helpers/Globals'
-], function($, _, Backbone, ImagesModel,Globals){
+  'models/instagram/instagram'
+], function($, _, Backbone, ImagesModel){
 
 	var InstagramCollection  = Backbone.Collection.extend({
  
