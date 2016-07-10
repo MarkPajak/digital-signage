@@ -222,10 +222,17 @@ define([
 					var logoOffset=logoOffset||0
 					var posterOffset=posterOffset||0;
 					
-					machineName=machine||'Mcafe'
+					machineName=machine.toUpperCase()||'Mcafe'
 					Allsettings=(JSON.parse(Settings))
 					settings="null"
-					settingsGroup=('Allsettings',Allsettings[machineName])
+					var key, keys = Object.keys(Allsettings);
+					var n = keys.length;
+					var newobj={}
+					while (n--) {
+					  key = keys[n];
+					  newobj[key.toUpperCase()] = Allsettings[key];
+					}
+					settingsGroup=('Allsettings',newobj[machineName])
 					
 					var d = new Date();
 					var n = d.getHours();	
