@@ -64,10 +64,10 @@ define([
 	venueFilter: function(venue) {	  
 	
 	//venue must match the venue field in emu
-	 if(venue.toUpperCase()=="M SHED"){venue = "M SHED"}
-	 
+		    if(venue.toUpperCase()=="M SHED"){venue = "M SHED"}	 
 				if(venue.toUpperCase()=="BMAG"){venue = "BRISTOL MUSEUM & ART GALLERY"}
 				if(venue.toUpperCase()=="MSHED"){venue = "M SHED"}
+				if(venue.toUpperCase()=="BLAISE"){venue = "BLAISE CASTLE HOUSE MUSEUM"}
 				
 	filteredx = this.filter(function(box) {
 	
