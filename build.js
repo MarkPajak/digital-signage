@@ -1,7 +1,7 @@
 ({
     appDir: './',
     baseUrl: './js',
-    dir: './../dist',
+    dir: './../Digital Signage',
     modules: [
         {
             name: 'main'
