@@ -1,2 +1,80 @@
 @import url('style.css');
 @import url('bootstrap.css'); 
+@import url('eventList.css');
+
+		*{
+		cursor: none;
+		}
+		 .nocursor { cursor:none; }
+		/* thanks to http://tobiasahlin.com/spinkit/ */
+		.spinner {
+		  width: 40px;
+		  height: 40px;
+		  position: relative;
+		  margin: 100px auto;
+		}
+
+		.double-bounce1, .double-bounce2 {
+		  width: 100%;
+		  height: 100%;
+		  border-radius: 50%;
+		  background-color: #333;
+		  opacity: 0.6;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  
+		  -webkit-animation: bounce 2.0s infinite ease-in-out;
+		  animation: bounce 2.0s infinite ease-in-out;
+		}
+
+		.double-bounce2 {
+		  -webkit-animation-delay: -1.0s;
+		  animation-delay: -1.0s;
+		}
+
+		@-webkit-keyframes bounce {
+		  0%, 100% { -webkit-transform: scale(0.0) }
+		  50% { -webkit-transform: scale(1.0) }
+		}
+
+		@keyframes bounce {
+		  0%, 100% { 
+			transform: scale(0.0);
+			-webkit-transform: scale(0.0);
+		  } 50% { 
+			transform: scale(1.0);
+			-webkit-transform: scale(1.0);
+		  }
+		}
+
+
+		/*design  will be for portrait screens 1080w x 1920h
+		landscape screens 1920w x 1080h
+		*/
+		@font-face {
+			  font-family: 'Muli';
+			  font-style: normal;
+			  font-weight: 400;
+			  src: local('Muli'), url("css/kU4XYdV4jtS72BIidPtqyw.woff") format('woff');
+		}
+
+
+		body{
+		background:black;
+		position:fixed;
+		width:100%;
+		overflow:hidden!important;
+			font-family: 'Muli', sans-serif;
+		}
+
+		#eventsList,#page{
+		padding-left: 5%;
+		}
+
+
+		/* http://www.colorzilla.com/gradient-editor/ */
+		body{
+		background:black;
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66bf00', endColorstr='#175e00',GradientType=0 ); /* IE6-9 */
+		}
