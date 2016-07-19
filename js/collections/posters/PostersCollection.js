@@ -40,7 +40,9 @@ define([
 		var workshopDay = new Date(model.get('endDate'))
 		var workshopDay_from = new Date(model.get('startDate'))
 
-			return workshopDay >= toDayMinusTime  && workshopDay_from <= toDayMinusTime || model.get('type')=="Exhibition" ;
+			return workshopDay >= toDayMinusTime  && workshopDay_from <= toDayMinusTime ||  
+					workshopDay_from <= toDayMinusTime && model.get('type')=="Exhibition" || 
+					workshopDay >= toDayMinusTime  && model.get('type')=="Special Event";
 			//return workshopDay >= toDayMinusTime;
 		});
 	   return new PosterCollection(filteredx);
@@ -66,15 +68,17 @@ define([
 	//venue must match the venue field in emu
 		    if(venue.toUpperCase()=="M SHED"){venue = "M SHED"}	 
 				if(venue.toUpperCase()=="BMAG"){venue = "BRISTOL MUSEUM & ART GALLERY"}
+				console.log(venue)
 				if(venue.toUpperCase()=="MSHED"){venue = "M SHED"}
 				if(venue.toUpperCase()=="BLAISE"){venue = "BLAISE CASTLE HOUSE MUSEUM"}
-				
+			
 	filteredx = this.filter(function(box) {
 	
 	var venuetoTest = box.get("venue")
 	if(	box.get("venue")){
 	venuetoTest = (box.get("venue").toUpperCase())}
-	
+	console.log(venuetoTest)
+	console.log(venue)
 	return venuetoTest==venue ||box.get("venue")==null
 	});	
 	return new PosterCollection(filteredx);
