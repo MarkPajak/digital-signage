@@ -1,7 +1,9 @@
 @import url('style.css');
 @import url('bootstrap.css'); 
 @import url('eventList.css');
-
+h3 {
+    font-size: 24.5px;
+}
 		*{
 		cursor: none;
 		}
