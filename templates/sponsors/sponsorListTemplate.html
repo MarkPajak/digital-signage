@@ -28,18 +28,32 @@ width:1000px;
 		}
 #sponsorCylcer img{
 
-max-width:270px;
-max-height:100px;
-height:auto;
-
-	position:relative;
-		top:40px;
+    /* max-width: 270px; */
+    /* max-height: 100px; */
+    height: 180px;
+    position: relative;
+    top: 50px;
+    width: 180px;
+    margin-bottom: 1.5em;
+    display: block;
+    -moz-box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    padding: 20px;
+    /* margin-top: 20px; */
 
 }	
 		
 #sponsorCylcer div{
-	height:100px;
-	padding-bottom:150px;
+    height: 109px;
+    /* padding-bottom: 150px; */
+    padding-bottom: 150px;
+    width: 199px;
+    float: left;
+    top: 60px;
+    /* padding: 30px; */
+    margin: 24px;
+	
 		}
 		
 #sponsorCylcer text{
@@ -72,13 +86,33 @@ height:auto;
  <%  var counter = 0
 
 	
+	
+	
 
 		 _.each(sponsors, function(sponsor){ 
+		 
+		 				 function UrlExists(url)
+{
+    var http = new XMLHttpRequest();
+    
+	try{
+	http.open('HEAD', url, false);
+    http.send();
+	}
+	catch(err){
+	return false;
+	}
+    return http.status!=404;
+}
+EventImage="sponsor-logos/"+  sponsor.get('logoIRN')+".jpg"
+if(	!UrlExists(EventImage))	{
+										EventImage="http://museums.bristol.gov.uk/multimedia/entry.php?request=resource&irn="+  sponsor.get('logoIRN')	+ "&width=300&format=jpeg"
+										}
 	if(counter>=offset &&  sponsor.get('logoIRN')>0){
 		 %>
 		<!--<div  class="<% if (counter==0){ print("active")} %>">  <%=  sponsor.get('name') %>-->
 		<div  id="sponsor_<%  print(counter) %>"  class="">
-		<img  src="sponsor-logos/<%=  sponsor.get('logoIRN') %>.jpg" />
+		<img  src="<%  print(EventImage) %>" />
 		</div>
 	
 
