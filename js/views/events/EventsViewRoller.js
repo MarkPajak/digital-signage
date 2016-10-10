@@ -138,14 +138,15 @@ define([
 						$('#heading').addClass('heading')
 						$('#heading h1').css({
 								
-								"left":" 10px",
+								"left":"10px",
 								"position":" absolute",
-								"font-size": "85"})
+								"top":" 10px",
+								"font-size": "110"})
 						
 						}
 						
 				
-					
+
 				
 				
 					
