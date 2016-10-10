@@ -25,7 +25,7 @@ define([
 			this.settings = (options.settings)
 			this.totalLogos = 0
 			//NB this is hard coded: will need to change this if size of sponsor logos changes. Also may need to change if portrait mode
-			this.numberofLogosInview = 12
+			this.numberofLogosInview = 27
 			
 	},
 
@@ -103,7 +103,7 @@ define([
 									
 										timeoutVariable=setTimeout(function(){
 												self.renderSponsors(response)										
-										},settings.sponsorMode_time * 1000)		
+										}, 2 * settings.sponsorMode_time * 1000)		
 									}		
 									else{
 									console.log('final page of logos')
@@ -111,7 +111,7 @@ define([
 									setTimeout(function(){
 									self.goToNextView(self.venue,self.logoOffset,self.posterOffset,self.nextView,self.backupNextView)
 
-									},settings.sponsorMode_time * 1000)	
+									}, 2 *  settings.sponsorMode_time * 1000)	
 									}									
 							
 										
