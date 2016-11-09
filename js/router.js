@@ -327,7 +327,29 @@ define([
 											settings:settings,
 											machine:machineName,
 											nextView:nextView,instagram:instagram,instaID:instaID																
-					}			
+					}	
+					
+								var urlBase =  'http://markpajak.co.uk/mark/kiosk-feedback/user_analytics.php';
+ 
+
+			  var data = {           
+				page_id:"1234",
+				page_name: 'route',
+				page_type:'AUTO',
+				kiosk:machineName,
+				app_type:"DIGITAL SIGNAGE",
+				location:venue,
+			};
+			
+			$.ajax({
+				type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+				url         : urlBase, // the url where we want to POST
+				data        : data, // our data object
+				dataType    : 'json', // what type of data do we expect back from the server
+				encode          : true
+			})
+			
+			
 					if(EventsParameters.logoOffset==null){EventsParameters.logoOffset=0}
 					if(currentModeTime==0){
 						window.history.pushState('object or string', 'Title', '#' + EventsParameters.nextView + '/venue'+	EventsParameters.venue+"/logo"+ EventsParameters.logoOffset +"/poster"+EventsParameters.posterOffset+"/machine"+machineName);
